@@ -15,7 +15,7 @@
 			<!-- Use the HibernateAware mapper instead of the default -->
 			<beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
 				<beans:property name="objectMapper">
-					<beans:bean class="ec.com.pyxme.web.config.HibernateAwareObjectMapper" />
+					<beans:bean class="ec.org.isspol.web.config.HibernateAwareObjectMapper" />
 				</beans:property>
 			</beans:bean>
 		</message-converters>
@@ -41,6 +41,6 @@
         <beans:property name="prefixJson" value="false"/>
         <beans:property name="supportedMediaTypes" value="application/json"/>
     </beans:bean>
-	<context:component-scan base-package="ec.com.pyxme.web" />
+	<context:component-scan base-package="ec.org.isspol.web" />
 	
 </beans:beans>
