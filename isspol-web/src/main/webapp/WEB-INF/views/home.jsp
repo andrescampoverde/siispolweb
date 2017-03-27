@@ -15,6 +15,12 @@
   <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+  <!-- vendor -->
+  <link rel="stylesheet" type="text/css" href="vendor/angular/bower_components/ng-notify/dist/ng-notify.min.css"/>
+  <link rel="stylesheet" href="vendor/angular/ng-table/ng-table.min.css" />
+
+
 </head>
 <body ng-controller="AppCtrl">
 <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
@@ -32,6 +38,7 @@
 <!-- Vendor -->
 <script src="vendor/angular/angular-ui-router/angular-ui-router.js"></script>
 <script src="vendor/angular/ngstorage/ngStorage.js"></script>
+
 
 <!-- bootstrap -->
 <script src="vendor/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -63,7 +70,15 @@
 <script src="js/directives/ui-toggleclass.js"></script>
 <script src="js/directives/ui-validate.js"></script>
 <script src="js/controllers/bootstrap.js"></script>
-<!-- Lazy loading -->
+
+
+
+<!-- vendor -->
+
+<script src="vendor/angular/bower_components/ng-notify/dist/ng-notify.min.js"></script>
+<script src="vendor/angular/ng-table/ng-table.min.js"></script>
+
+
 </body>
 </html>
 

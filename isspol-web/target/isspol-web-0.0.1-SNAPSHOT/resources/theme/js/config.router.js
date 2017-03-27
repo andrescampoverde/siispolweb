@@ -18,6 +18,7 @@ angular.module('app')
 
           $urlRouterProvider
               .otherwise('/access/signin');
+
           $stateProvider
               .state('app', {
                   abstract: true,
@@ -44,6 +45,141 @@ angular.module('app')
                     }]
                   }
               })
+
+
+              .state('app.form.usuarioIsspol', {
+                  url: '/usuarioIsspol',
+                  templateUrl: 'tpl/pyxme/administration/usuarioIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/pyxme/administration/usuarioIsspol.js']);
+                          }]
+                  }
+              })
+
+
+              .state('app.form.estructOrg', {
+                  url: '/estructOrg',
+                  templateUrl: 'tpl/isspol/seguridades/sucursales_oficinas/estructOrg.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/sucursales_oficinas/estructOrg.js']);
+                          }]
+                  }
+              })
+
+
+              .state('app.form.sucursalesIsspol', {
+                  url: '/sucursalesIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/sucursales_oficinas/sucursalesIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/sucursales_oficinas/sucursalesIsspol.js']);
+                          }]
+                  }
+              })
+
+              .state('app.form.ciudadesIsspol', {
+                  url: '/ciudadesIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/sucursales_oficinas/ciudadesIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/sucursales_oficinas/ciudadesIsspol.js']);
+                          }]
+                  }
+              })
+
+              .state('app.form.oficinasIsspol', {
+                  url: '/oficinasIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/sucursales_oficinas/oficinasIsspol.js']);
+                          }]
+                  }
+              })
+
+              .state('app.form.perfilesIsspol', {
+                  url: '/perfilesIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/usuarios_perfiles/perfilesIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/usuarios_perfiles/perfilesIsspol.js']);
+                          }]
+                  }
+              })
+              .state('app.form.nivelOrg', {
+                  url: '/nivelOrg',
+                  templateUrl: 'tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/sucursales_oficinas/nivelOrg.js']);
+                          }]
+                  }
+              })
+              .state('app.form.usuarioPerfiles', {
+                  url: '/usuarioPerfiles',
+                  templateUrl: 'tpl/isspol/seguridades/usuarios_perfiles/usuarioPerfil.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/usuarios_perfiles/usuarioPerfil.js']);
+                          }]
+                  }
+              })
+
+              .state('app.form.cargosIsspol', {
+                  url: '/cargosIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/usuarios_perfiles/cargosIsspol.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/usuarios_perfiles/cargosIsspol.js']);
+                          }]
+                  }
+              })
+
+              .state('app.form.catalogos', {
+                  url: '/catalogos',
+                  templateUrl: 'tpl/isspol/sistema/catalogos-generales.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/sistema/catalogos-generales.js']);
+                          }]
+                  }
+              })
+
+
+              .state('app.form.motivoCierreSesion', {
+                  url: '/cierreSesionIsspol',
+                  templateUrl: 'tpl/isspol/seguridades/inicios_sesion/motivoCierreSesion.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function (uiLoad) {
+                              return uiLoad.load([
+                                  'js/controllers/isspol/seguridades/inicios_sesion/motivoCierreSesion.js']);
+                          }]
+                  }
+              })
+
               .state('app.ui', {
                   url: '/ui',
                   template: '<div ui-view class="fade-in-up"></div>'
@@ -529,6 +665,9 @@ angular.module('app')
                     url: '/playlist/{fold}',
                     templateUrl: 'tpl/music.playlist.html'
                 })
+
+
+
       }
     ]
   );
