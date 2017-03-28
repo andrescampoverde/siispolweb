@@ -7,7 +7,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         controller = this;
         controller.lstUsers = [];
         var index = undefined;
-        controller.seleccionFuncion = undefined;
+        var seleccionFuncion = undefined;
 
         controller.mostarBtnCancelaLin= false;
 
@@ -19,11 +19,10 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
         }
 
-        controller.editarRegistro = function (registro,$index) {
-            // index = controller.lstUsers.indexOf(registro);
-            controller.lstUsers.splice($index,1);
-            controller.objUsuario =registro;
-            // controller.updateList();
+        controller.editarRegistro = function (registro) {
+            index = controller.lstUsers.indexOf(registro);
+            controller.user =registro;
+            controller.updateList();
         };
 
 
@@ -49,7 +48,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         controller.nuevaLinea = function (){
             switch (seleccionFuncion){
                 case 1:
-                    controller.objUsuario= {};
+                    controller.user= {};
                     index = undefined;
                     break;
                 case 2:
@@ -84,7 +83,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
         controller.nuevo = function () {
             controller.updateList();
-            controller.objUsuario= {
+            controller.user= {
                 lstOficinas:[]
             };
         };
@@ -92,15 +91,15 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         function cargarHorarios() {
             controller.lstHorarios = [];
             var horario = {
-                idHorario:1,
-                descripcion:"Diurno"
+                id:1,
+                nombre:"Diurno"
             };
 
             controller.lstHorarios.push(horario);
 
             horario = {
-                idHorario:2,
-                descripcion:"Nocturno"
+                id:2,
+                nombre:"Nocturno"
             };
             controller.lstHorarios.push(horario);
         };
@@ -136,22 +135,22 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         function cargarEstaciones() {
             controller.lstEstaciones = [];
             var estacion = {
-                idEstacion: "1",
-                descripcion: "equipo1",
+                id: "1",
+                nombre: "equipo1",
             };
 
             controller.lstEstaciones.push(estacion);
 
             estacion = {
-                idEstacion: "2",
-                descripcion: "equipo2",
+                id: "2",
+                nombre: "equipo2",
             };
 
             controller.lstEstaciones.push(estacion);
 
             estacion = {
-                idEstacion: "3",
-                descripcion: "equipo3",
+                id: "3",
+                nombre: "equipo3",
             };
 
             controller.lstEstaciones.push(estacion);
@@ -178,7 +177,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
                     nombrePerfil:"Administrador"
                 },
                 {
-                    idPerfil:2,
+                    idPerfil:1,
                     nombrePerfil:"Gerente"
                 }
             ];
@@ -187,14 +186,14 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         function cargarSuperiores() {
             controller.lstSuperiores = [];
             var superior = {
-                idUsuario:1,
+                id:1,
                 nombre:"CORONEL "
             };
 
             controller.lstSuperiores.push(superior);
 
             superior = {
-                idUsuario:2,
+                id:2,
                 nombre:"TENIENTE "
             };
 
@@ -240,21 +239,21 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         function cargarOficinas() {
             controller.lstOficinas = [];
             var oficina = {
-                idOficina: "1",
+                id: "1",
                 nombre: "Guayaquil",
             };
 
             controller.lstOficinas.push(oficina);
 
             oficina = {
-                idOficina: "2",
+                id: "2",
                 nombre: "Quito",
             };
 
             controller.lstOficinas.push(oficina);
 
             oficina = {
-                idOficina: "3",
+                id: "3",
                 nombre: "Cayambe",
             };
 
@@ -262,16 +261,16 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
         };
 
-        function guardarUsuario  (objUsuario){
+        function guardarUsuario  (user){
             var usr = {
-                idUsuario:objUsuario.idUsuario,
-                nombre:objUsuario.nombre,
-                identificacion:objUsuario.identificacion,
-                oficina:objUsuario.oficina,
-                cargo:objUsuario.cargo,
-                superior:objUsuario.superior,
-                estado:objUsuario.estado,
-                email:objUsuario.email
+                id:user.id,
+                userName:user.userName,
+                identificationNumber:user.identificationNumber,
+                office:user.office,
+                appointment:user.appointment,
+                upper:user.upper,
+                status:user.status,
+                email:user.email
             };
 
             controller.lstUsers.push(usr);
@@ -290,7 +289,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
                     var valida = document.formUsuarios.reportValidity();
                     var invalid = $scope.$$childTail.$$childHead.$$childHead.formUsuarios.$valid;
                     if(valida && invalid){
-                        guardarUsuario(controller.objUsuario);
+                        guardarUsuario(controller.user);
                         break;
                     }else {
                         ngNotify.set('Debe ingresar todos los campos marcados en *', 'error');
@@ -298,18 +297,17 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
                     }
                 case 2:
                     var valida=document.formPerfiles.reportValidity();
-                    if(valida&&controller.usrPerfil.perfil!==undefined&&controller.usrPerfil.estado!==undefined){
+                    if(valida){
                         controller.guardarPerfil();
                         break;
                     }else{
-                        ngNotify.set('Debe ingresar todos los campos marcados en *', 'error');
                         break;
                     }
                 // break;
                 case 3:
                     var valida1 = document.formEstaciones.reportValidity();
-                    // var invalid1 = $scope.$$childTail.$$childHead.$$childHead.formEstaciones.$valid;
-                    if(valida1 && controller.usrEstacion.estacion!==undefined){
+                    var invalid1 = $scope.$$childTail.$$childHead.$$childHead.formEstaciones.$valid;
+                    if(valida1 && invalid1){
                         controller.guardarEstaciones();
                         break;
                     }else {
@@ -320,14 +318,9 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
                     document.formEstaciones.reportValidity();
                     break;
                 case 5:
-                    var validacion=document.formOficinas.reportValidity();
-                    if(validacion&&controller.object.oficina!==undefined){
-                        controller.guardarOficinas();
-                        break;
-                    }else{
-                        ngNotify.set('Debe ingresar todos los campos marcados en *', 'error');
-                        break;
-                    }
+                    document.formOficinas.reportValidity();
+                    controller.guardarOficinas();
+                    break;
             }
 
         };
@@ -341,14 +334,14 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         //Inicio de creacion de oficinas para un usuario
 
         controller.usuarioRegistro = {
-            idUsuario:1,
-            nombre:"Javier Almeida"
+            id:1,
+            userName:"Javier Almeida"
         };
 
-        function buscarUsuario (objUsuario){
+        function buscarUsuario (user){
             for (var i=0; i<controller.lstUsers.length;i++){
-                if(controller.lstUsers[i].idUsuario=objUsuario.idUsuario)
-                    controller.lstUsers[i] = objUsuario;
+                if(controller.lstUsers[i].id=user.id)
+                    controller.lstUsers[i] = user;
 
             }
         };
@@ -356,12 +349,12 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
         function actuliazarLista() {
             if(index!=undefined)
-                controller.lstUsers[index]=controller.objUsuario;
+                controller.lstUsers[index]=controller.user;
 
             if (index== undefined){
-                // var ind = controller.lstUsers.indexOf(controller.objUsuario);
+                var ind = controller.lstUsers.indexOf(controller.user);
                 // controller.lstUsers[ind]= controller.user;
-                buscarUsuario (controller.objUsuario);
+                buscarUsuario (controller.user);
             }else {
 
             }
@@ -373,11 +366,11 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             if (controller.usrPerfil== undefined)  {
                 ngNotify.set('Debe ingresar un nuevo registro para poder continuar', 'warn');
             }else {
-                controller.usrPerfil.creacionUsuario = controller.usuarioRegistro;
-                controller.usrPerfil.creacionFecha = new Date();
-                if (controller.objUsuario.lstPerfiles == undefined)
-                    controller.objUsuario.lstPerfiles = [];
-                controller.objUsuario.lstPerfiles.push(controller.usrPerfil);
+                controller.usrPerfil.creatingUser = controller.usuarioRegistro;
+                controller.usrPerfil.creatingDate = new Date();
+                if (controller.user.lstPerfiles == undefined)
+                    controller.user.lstPerfiles = [];
+                controller.user.lstPerfiles.push(controller.usrPerfil);
                 ngNotify.set('Exito registro guardado correctamente', 'success');
                 actuliazarLista();
                 controller.cancelarIngresoLineas();
@@ -388,14 +381,14 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             if (controller.usrEstacion== undefined)  {
                 ngNotify.set('Debe ingresar un nuevo registro para poder continuar', 'warn');
             }else {
-                controller.usrEstacion.creacionUsuario=controller.usuarioRegistro;
-                controller.usrEstacion.creacionFecha = new Date();
-                if (controller.objUsuario.lstEstaciones==undefined)
-                    controller.objUsuario.lstEstaciones=[];
+                controller.usrEstacion.creatingUser=controller.usuarioRegistro;
+                controller.usrEstacion.creatingDate = new Date();
+                if (controller.user.lstEstaciones==undefined)
+                    controller.user.lstEstaciones=[];
 
-                controller.objUsuario.lstEstaciones.push(controller.usrEstacion);
+                controller.user.lstEstaciones.push(controller.usrEstacion);
                 ngNotify.set('Exito registro guardado correctamente', 'success');
-                actuliazarLista();
+                //actuliazarLista();
                 //controller.cancelarIngresoLineas();
                 controller.usrEstacion= undefined
                 controller.mostarBtnCancelaLin= false;
@@ -409,12 +402,12 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             if (controller.object== undefined)  {
                 ngNotify.set('Debe ingresar un nuevo registro para poder continuar', 'warn');
             }else {
-                controller.object.creacionUsuario=controller.usuarioRegistro;
-                controller.object.creacionFecha = new Date();
-                if (controller.objUsuario.lstOficinas==undefined)
-                    controller.objUsuario.lstOficinas=[];
+                controller.object.creatingUser=controller.usuarioRegistro;
+                controller.object.creatingDate = new Date();
+                if (controller.user.lstOficinas==undefined)
+                    controller.user.lstOficinas=[];
 
-                controller.objUsuario.lstOficinas.push(controller.object);
+                controller.user.lstOficinas.push(controller.object);
                 ngNotify.set('Exito registro guardado correctamente', 'success');
                 actuliazarLista();
                 controller.cancelarIngresoLineas();
@@ -439,21 +432,21 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
         function cargarOficinas() {
             var oficina = {
-                idOficina:1,
+                id:1,
                 nombre:'San Miguel de los Bancos'
             }
 
             controller.lstOficinas.push(oficina);
 
             oficina = {
-                idOficina:2,
+                id:2,
                 nombre:'Pedro Vicente Maldonado'
             }
 
             controller.lstOficinas.push(oficina);
 
             oficina = {
-                idOficina:3,
+                id:3,
                 nombre:'Puerto Quito'
             }
 
@@ -463,7 +456,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
 
         controller.insertarOficina=function (objOficina) {
-            controller.objUsuario.lstOficinas.push(objOficina);
+            controller.user.lstOficinas.push(objOficina);
         };
 
 
@@ -480,40 +473,37 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             controller.usrEstacion = undefined;
         };
         controller.cancelar= function () {
-            controller.objUsuario=undefined;
+            controller.user=undefined;
         };
 
 
-        controller.editarPerfil= function (registro,$index) {
-            controller.objUsuario.lstPerfiles.splice($index,1);
+        controller.editarPerfil= function (registro) {
             controller.usrPerfil = registro;
             controller.mostarBtnCancelaLin= false;
 
         };
 
         controller.eliminarPerfil= function ($index) {
-            controller.objUsuario.lstPerfiles.splice($index,1);
+            controller.user.lstEstaciones.splice($index,1);
         };
 
-        controller.editarEstacion= function (registro,$index) {
-            controller.objUsuario.lstEstaciones.splice($index,1);
+        controller.editarEstacion= function (registro) {
             controller.usrEstacion = registro;
             controller.mostarBtnCancelaLin= false;
         };
 
         controller.eliminarEstacion= function ($index) {
-            controller.objUsuario.lstEstaciones.splice($index,1);
+            controller.user.lstEstaciones.splice($index,1);
         };
 
-        controller.editarOficina= function (registro,$index) {
-            controller.objUsuario.lstOficinas.splice($index,1);
+        controller.editarOficina= function (registro) {
             controller.object = registro;
             controller.mostarBtnCancelaLin= false;
 
         };
 
         controller.eliminarOficina= function ($index) {
-            controller.objUsuario.lstOficinas.splice($index,1);
+            controller.user.lstOficinas.splice($index,1);
         };
 
         cargarEstaciones();
