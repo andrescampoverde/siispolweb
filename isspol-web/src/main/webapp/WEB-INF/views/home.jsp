@@ -78,6 +78,11 @@
 <script src="vendor/angular/bower_components/ng-notify/dist/ng-notify.min.js"></script>
 <script src="vendor/angular/ng-table/ng-table.min.js"></script>
 
+<!-- Mapping DWR -->
+
+<script type='text/javascript' src='/dwr/interface/UsuarioPerfil.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
 
 </body>
 </html>
