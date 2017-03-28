@@ -1,4 +1,4 @@
-package ec.org.isspol.web.seguridades;
+package main.java.ec.org.isspol.web.seguridades;
 
 /**
  * Created by santiago.yacelga on 27/03/2017.

@@ -1,4 +1,4 @@
-package ec.com.pyxme.web;
+package main.java.ec.com.pyxme.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
