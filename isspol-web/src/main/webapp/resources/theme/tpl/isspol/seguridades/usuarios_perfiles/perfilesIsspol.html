@@ -2,11 +2,9 @@
 	<h1 class="m-n font-thin h3">PERFILES DE USUARIO</h1>
 </div>
 
-<div class="wrapper-md" ng-controller="PerfilesIsspol as vm">
+<div  ng-controller="PerfilesIsspol as vm">
 
-	<div ng-if="!vm.perfil" class="panel panel-defaul panel-body">
-	
-	<div>
+
 
 		<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
 			<div class="hbox text-left b-b b-light text-sm">
@@ -16,11 +14,7 @@
 					<span>Nuevo</span>
 				</button>
 
-				<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-						type="submit" ng-click="vm.nuevaLinea()">
-					<i class="fa fa-bars block m-b-xs fa-2x "></i>
-					<span>Nuevo</span>
-				</button>
+
 				<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
 						type="submit" ng-click="vm.guardar(vm.perfil)">
 					<i class="fa fa-save block m-b-xs fa-2x "></i>
@@ -43,6 +37,9 @@
 
 			</div>
 		</div>
+	<div ng-if="!vm.perfil" class="panel panel-defaul panel-body">
+
+		<div>
 		<table  class="table table-condensed table-bordered table-striped" show-filter="true">
 			<thead>
 				<tr>
@@ -76,30 +73,7 @@
 
 	<form ng-if="vm.perfil" name="form" class="form-validation">
 		<div class="panel panel-default">
-			<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-				<div class="hbox text-left b-b b-light text-sm">
-					<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.guardar(vm.perfil)">
-						<i class="fa fa-save block m-b-xs fa-2x "></i>
-						<span>Guardar</span>
-					</button>
-					<button ng-if="vm.perfil && !vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
-							type="submit" ng-click="vm.cancelar();">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
 
-					<button ng-if="vm.perfil && vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-info btn-addon"
-							type="submit" ng-click="vm.cancelarIngresoLineas()">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
-
-				</div>
-			</div>
 
 		<div class="panel panel-default">
 				<div class="panel-heading font-bold">DATOS DE PERFIL DE USUARIO</div>
