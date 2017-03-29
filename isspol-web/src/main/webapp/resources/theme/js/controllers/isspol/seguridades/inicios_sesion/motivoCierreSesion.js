@@ -7,7 +7,7 @@ app.controller("MotivosCierre",['ngNotify',"$scope", 'ngTableParams',
         controller=this;
         controller.lstMotivosCierre=[];
         controller.usuario={
-            id:1,
+            idUsuario:1,
             nombre: 'Admin'
         };
 

@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Id: </label>
                     <div class="col-sm-3">
-                        <input type="number" ng-model="vm.motivo.id"
+                        <input type="number" ng-model="vm.motivo.idMotivo"
                                class="form-control" placeholder="Ingrese el Id" required />
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Nombre: </label>
                     <div class="col-sm-3">
-                        <input type="text" ng-model="vm.motivo.nombre"
+                        <input type="text" ng-model="vm.motivo.motivo"
                                class="form-control" placeholder="Ingrese el nombre" required />
                     </div>
                 </div>
@@ -77,9 +77,9 @@
                 </thead>
 
                 <tr ng-repeat="iterador in vm.lstMotivosCierre">
-                    <td class="text-center" data-title="ID">{{iterador.id}}</td>
-                    <td class="text-center" data-title="NOMBRE">{{iterador.nombre}}</td>
-                    <td class="text-center" data-title="VIGENTE">{{iterador.vigente}}</td>
+                    <td class="text-center" data-title="ID">{{iterador.idMotivo}}</td>
+                    <td class="text-center" data-title="NOMBRE">{{iterador.motivo}}</td>
+                    <td class="text-center" data-title="VIGENTE">{{iterador.vigente==true?'Si':'No'}}</td>
                     <td class="text-center" data-title="CREACIONUSUARIO">{{iterador.usuario.nombre}}</td>
                     <td class="text-center" data-title="CREACIONFECHA">{{iterador.fecha}}</td>
                     <td class="text-center" data-title="MODIFICAUSUARIO">{{iterador.usuario.nombre}}</td>
