@@ -3,9 +3,16 @@
         "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
 
 <dwr>
+    <init>
+        <converter id="map" class="org.directwebremoting.convert.MapConverter"/>
+        <converter id="object" class="org.directwebremoting.convert.ObjectConverter"/>
+    </init>
+
     <allow>
         <create creator="new" javascript="UsuarioPerfil">
             <param name="class" value="ec.org.isspol.web.seguridades.UsuarioPerfil"/>
         </create>
+
+        <convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>
     </allow>
 </dwr>
