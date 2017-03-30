@@ -2,28 +2,22 @@
 	<h1 class="m-n font-thin h3">CARGOS</h1>
 </div>
 
-<div class="wrapper-md" ng-controller="CargosIsspol as vm">
+<div  ng-controller="CargosIsspol as vm">
 
-	<div ng-if="!vm.cargo" class="panel panel-defaul panel-body">
-
-		<div>
+	<div class="hbox text-left b-b b-light text-sm">
 			<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-				<button ng-if="!vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+				<button ng-if="!vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
 						type="reset" ng-click="vm.nuevoCargo()">
 					<i class="fa fa-plus"></i>
 					<span>Nuevo</span>
 				</button>
-				<div class="hbox text-left b-b b-light text-sm">
 
-					<button ng-if="vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.nuevaLinea()">
-						<i class="fa fa-bars block m-b-xs fa-2x "></i>
-						<span>Nuevo</span>
-					</button>
-					<button ng-if="vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.guardar()">
+
+
+					<button ng-if="vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
+							type="submit" ng-click="vm.guardar(vm.cargo)">
 						<i class="fa fa-save block m-b-xs fa-2x "></i>
-						<span translate="label.global.guardar"/>
+						<span>Guardar</span>
 					</button>
 					<button ng-if="vm.cargo && !vm.mostarBtnCancelaLin ? true:false"
 							class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
@@ -43,6 +37,9 @@
 				</div>
 			</div>
 
+	<div ng-if="!vm.cargo" class="panel panel-defaul panel-body">
+
+		<div>
 			<table  class="table table-condensed table-bordered table-striped" show-filter="true">
 				<thead>
 				<tr>
@@ -74,30 +71,6 @@
 
 	<form ng-if="vm.cargo" name="formCargos" id="formCargos" class="form-validation">
 		<div class="panel panel-default">
-			<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-				<div class="hbox text-left b-b b-light text-sm">
-					<button ng-if="vm.cargo" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.guardar(vm.cargo)">
-						<i class="fa fa-save block m-b-xs fa-2x "></i>
-						<span>Guardar</span>
-					</button>
-					<button ng-if="vm.cargo && !vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
-							type="submit" ng-click="vm.cancelar();">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
-					<button ng-if="vm.cargo && vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-info btn-addon"
-							type="submit" ng-click="vm.cancelarIngresoLineas()">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
-
-				</div>
-			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading font-bold">DATOS DE CARGOS</div>
 				<div class="panel-body has-success">
@@ -113,17 +86,17 @@
 						</div>
 					</div>
 
-					<div class="line line-dashed b-b line-lg pull-in"></div>
+					<div class="line"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">*Nombre: </label>
-						<div class="col-sm-10">
+						<div class="col-sm-3">
 							<input type="text" ng-model="vm.cargo.nombre"
 								   class="form-control"
 								   placeholder="Ingrese el nombre del Cargo" required />
 						</div>
 					</div>
 
-					<div class="line line-dashed b-b line-lg pull-in"></div>
+					<div class="line"></div>
 				</div>
 			</div>
 
