@@ -9,10 +9,13 @@
     </init>
 
     <allow>
-        <create creator="new" javascript="UsuarioPerfil">
+        <create creator="new" javascript="UsuarioPerfil" scope="application">
             <param name="class" value="ec.org.isspol.web.seguridades.UsuarioPerfil"/>
+            <include method="obtenerOficinasSucursales"/>
         </create>
 
-        <convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>
+        <!--<convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>-->
+        <convert converter="bean" match="ec.org.isspol.web.seguridades.Usuario"/>
+
     </allow>
 </dwr>

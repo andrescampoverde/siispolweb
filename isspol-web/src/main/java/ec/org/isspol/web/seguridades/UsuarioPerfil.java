@@ -2,6 +2,7 @@ package ec.org.isspol.web.seguridades;
 
 import ec.org.isspol.entities.security.OficinaSucursal;
 //import ec.org.isspol.route.client.UsuarioServiceClient;
+import ec.org.isspol.route.client.context.ApplicartionContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +12,9 @@ import java.util.List;
  */
 public class UsuarioPerfil {
 
-    public List<OficinaSucursal> obtenerOficinasSucursales (OficinaSucursal oficinaSucursal){
+    public List<OficinaSucursal> obtenerOficinasSucursales (Usuario usuario){
         List<OficinaSucursal> lstTest = new ArrayList<>();
-        lstTest.add(oficinaSucursal);
+      //  lstTest.add(oficinaSucursal);
 
         OficinaSucursal oficina = new OficinaSucursal("001","Latacunga","002","Pruebas");
 
@@ -23,9 +24,8 @@ public class UsuarioPerfil {
         lstTest.add(oficina);
 
         System.out.println("HOLA");
-//        UsuarioServiceClient client = (UsuarioServiceClient) ApplicartionContext.getBean("usuarioServiceClient");
-//        List<OficinaSucursal> oficinaSucursals = client.getAllOficinaSucursal();
-//        return oficinaSucursals;
-        return lstTest;
+        UsuarioServiceClient client = (UsuarioServiceClient) ApplicartionContext.getBean("usuarioServiceClient");
+        List<OficinaSucursal> oficinaSucursals = client.getAllOficinaSucursal();
+        return oficinaSucursals;
     };
 }
