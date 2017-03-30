@@ -13,11 +13,17 @@
             <param name="class" value="ec.org.isspol.web.seguridades.Usuario"/>
             <include method="obtenerOficinasSucursales"/>
             <include method="obtenerHorarios"/>
+            <include method="obtenerEstados"/>
+            <include method="obtenerCargos"/>
         </create>
 
         <!--<convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>-->
         <convert converter="bean" match="ec.org.isspol.persistence.entities.security.Horario"/>
         <convert converter="bean" match="ec.org.isspol.persistence.entities.security.OficinaSucursal"/>
+        <convert converter="bean" match="ec.org.isspol.persistence.entities.security.EstadoUsuario"/>
+        <convert converter="hibernate3" match="ec.org.isspol.persistence.entities.security.Horario">
+            <param name="exclude" value="ec.org.isspol.persistence.entities.security.Horario.horarioDetallesByIdHorario"/>
+        </convert>
 
     </allow>
 </dwr>
