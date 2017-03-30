@@ -1,40 +1,34 @@
 package ec.org.isspol.web.seguridades;
 
+import ec.org.isspol.persistence.entities.security.OficinaSucursal;
+import ec.org.isspol.route.client.UsuarioServiceClient;
+import ec.org.isspol.route.client.context.ApplicartionContext;
+
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by santiago.yacelga on 29/03/2017.
  */
 public class Usuario implements Serializable {
-   private  String id;
-   private String nombre;
-   private String apellido;
 
-   public Usuario (){
+    public List<OficinaSucursal> obtenerHorarios (Usuario usuario){
+        List<OficinaSucursal> lstTest = new ArrayList<>();
+        //  lstTest.add(oficinaSucursal);
 
-   }
+        OficinaSucursal oficina = new OficinaSucursal("001","Latacunga","002","Pruebas");
 
-    public String getId() {
-        return id;
-    }
+        lstTest.add(oficina);
 
-    public void setId(String id) {
-        this.id = id;
-    }
+        oficina = new OficinaSucursal("002","Latacunga2","002","Pruebaws");
+        lstTest.add(oficina);
 
-    public String getNombre() {
-        return nombre;
-    }
+        System.out.println("HOLA");
+        UsuarioServiceClient client = (UsuarioServiceClient) ApplicartionContext.getBean("usuarioServiceClient");
+        List<OficinaSucursal> oficinaSucursals = client.getAllOficinaSucursal();
+        return oficinaSucursals;
+    };
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 }
