@@ -26,7 +26,7 @@ app.controller('SigninFormController', ['$scope', '$http', '$state', function($s
 
 //        UsuarioPerfil.obtenerOficinasSucursales($scope.oficinaSucursal, callbackObtenerOficinasSucursales);
 
-        UsuarioPerfil.obtenerOficinasSucursales(usuario, callbackObtenerOficinasSucursales);
+       // UsuarioPerfil.obtenerOficinasSucursales(usuario, callbackObtenerOficinasSucursales);
 
 
         $state.go('app.dashboard-v2');

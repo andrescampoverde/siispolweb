@@ -1,7 +1,8 @@
 package ec.org.isspol.web.seguridades;
 
-import ec.org.isspol.entities.security.OficinaSucursal;
-//import ec.org.isspol.route.client.UsuarioServiceClient;
+
+import ec.org.isspol.persistence.entities.security.OficinaSucursal;
+import ec.org.isspol.route.client.UsuarioServiceClient;
 import ec.org.isspol.route.client.context.ApplicartionContext;
 
 import java.util.ArrayList;
