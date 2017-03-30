@@ -4,22 +4,22 @@
 
 <div ng-controller="OficinasIsspol as vm">
 
-	<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
+	<div class="bg-light lter b-b wrapper-md">
 		<div class="hbox text-left b-b b-light text-sm">
-			<button ng-if="!vm.objOficina" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+			<button ng-if="!vm.objOficina" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
 					type="reset" ng-click="vm.nuevaOficina()">
-				<i class="fa fa-file block m-b-xs fa-2x "></i>
+				<i class="fa fa-plus m-b-xs  "></i>
 				<span>Nuevo</span>
 			</button>
 
-			<button ng-if="vm.objOficina" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+			<button ng-if="vm.objOficina" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
 					type="submit" ng-click="vm.guardar(vm.objOficina)">
-				<i class="fa fa-save block m-b-xs fa-2x "></i>
+				<i class="fa fa-save m-b-xs "></i>
 				<span>Guardar</span>
 			</button>
 			<button ng-if="vm.objOficina" class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
 					type="submit" ng-click="vm.cancelar()">
-				<i class="fa fa-ban block m-b-xs fa-2x "></i>
+				<i class="fa fa-ban m-b-xs"></i>
 				<span>Cancelar</span>
 			</button>
 
