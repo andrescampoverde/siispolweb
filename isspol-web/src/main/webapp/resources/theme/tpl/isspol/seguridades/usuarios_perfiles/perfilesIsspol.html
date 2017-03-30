@@ -4,51 +4,27 @@
 
 <div ng-controller="PerfilesIsspol as vm">
 
+	<div ng-if="!vm.perfil" class="bg-light lter b-b wrapper-md">
+		<div class="hbox text-left b-b b-light text-sm">
+			<button class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
+					type="reset" ng-click="vm.nuevoPerfil()">
+				<i class="fa fa-plus m-b-xs  "></i>
+				<span>Nuevo</span>
+			</button>
+
+		</div>
+	</div>
+
 	<div ng-if="!vm.perfil" class="panel panel-defaul panel-body">
 
 		<div>
-			<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-				<div class="hbox text-left b-b b-light text-sm">
-					<button ng-if="!vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="reset" ng-click="vm.nuevoPerfil()">
-						<i class="fa fa-plus"></i>
-						<span>Nuevo</span>
-					</button>
-
-					<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.nuevaLinea()">
-						<i class="fa fa-bars block m-b-xs fa-2x "></i>
-						<span>Nuevo</span>
-					</button>
-					<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-							type="submit" ng-click="vm.guardar(vm.perfil)">
-						<i class="fa fa-save block m-b-xs fa-2x "></i>
-						<span>Guardar</span>
-					</button>
-					<button ng-if="vm.perfil && !vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
-							type="submit" ng-click="vm.cancelar()">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
-					<button ng-if="vm.perfil && vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-info btn-addon"
-							type="submit" ng-click="vm.cancelarIngresoLineas()">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
-
-				</div>
-			</div>
 
 			<table class="table table-condensed table-bordered table-striped" show-filter="true">
 				<thead>
 				<tr>
 					<th>ID</th>
 					<th>NOMBRE</th>
-	
+
 					<th>OPCIONES</th>
 				</tr>
 				</thead>
@@ -76,9 +52,11 @@
 
 	<form ng-if="vm.perfil" name="formPerfiles" id="formPerfiles" class="form-validation">
 		<div class="panel panel-default">
-			<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
+			<div class="bg-light lter b-b wrapper-md">
 				<div class="hbox text-left b-b b-light text-sm">
-					<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+
+
+					<button ng-if="vm.perfil" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
 							type="submit" ng-click="vm.guardar(vm.perfil)">
 						<i class="fa fa-save block m-b-xs fa-2x "></i>
 						<span>Guardar</span>
@@ -89,14 +67,6 @@
 						<i class="fa fa-ban block m-b-xs fa-2x "></i>
 						<span>Cancelar</span>
 					</button>
-
-					<button ng-if="vm.perfil && vm.mostarBtnCancelaLin ? true:false"
-							class="pull-rigth btn m-b-xs btn-sm btn-info btn-addon"
-							type="submit" ng-click="vm.cancelarIngresoLineas()">
-						<i class="fa fa-ban block m-b-xs fa-2x "></i>
-						<span>Cancelar</span>
-					</button>
-
 
 				</div>
 			</div>

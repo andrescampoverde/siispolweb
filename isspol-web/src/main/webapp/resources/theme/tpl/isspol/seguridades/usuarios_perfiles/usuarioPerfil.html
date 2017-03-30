@@ -6,18 +6,18 @@
 
     <div class="bg-light lter b-b wrapper-md">
         <div class="hbox text-left b-b b-light text-sm">
-            <button ng-if="!vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon"
+            <button ng-if="!vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon"
                     type="reset" ng-click="vm.nuevo()">
                 <i class="fa fa-plus"></i>
                 <span>Nuevo</span>
             </button>
 
-            <button ng-if="vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+            <button ng-if="vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
                     type="submit" ng-click="vm.nuevaLinea()">
                 <i class="fa fa-bars block m-b-xs fa-2x "></i>
                 <span>Nuevo</span>
             </button>
-            <button ng-if="vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+            <button ng-if="vm.objUsuario" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
                     type="submit" ng-click="vm.guardar()">
                 <i class="fa fa-save block m-b-xs fa-2x "></i>
                 <span>Guardar</span>
