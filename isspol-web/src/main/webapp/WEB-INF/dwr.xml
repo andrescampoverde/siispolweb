@@ -18,6 +18,9 @@
         <!--<convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>-->
         <convert converter="bean" match="ec.org.isspol.persistence.entities.security.Horario"/>
         <convert converter="bean" match="ec.org.isspol.persistence.entities.security.OficinaSucursal"/>
+        <convert converter="hibernate3" match="ec.org.isspol.persistence.entities.security.Horario">
+            <param name="exclude" value="ec.org.isspol.persistence.entities.security.Horario.horarioDetallesByIdHorario"/>
+        </convert>
 
     </allow>
 </dwr>
