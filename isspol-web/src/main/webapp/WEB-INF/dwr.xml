@@ -12,10 +12,12 @@
         <create creator="new" javascript="UsuarioPerfil" scope="application">
             <param name="class" value="ec.org.isspol.web.seguridades.UsuarioPerfil"/>
             <include method="obtenerOficinasSucursales"/>
+            <include method="obtenerHorarios"/>
         </create>
 
         <!--<convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>-->
-        <convert converter="bean" match="ec.org.isspol.web.seguridades.Usuario"/>
+        <convert converter="bean" match="ec.org.isspol.persistence.entities.security.Horario"/>
+        <convert converter="bean" match="ec.org.isspol.persistence.entities.security.OficinaSucursal"/>
 
     </allow>
 </dwr>
