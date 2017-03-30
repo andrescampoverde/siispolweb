@@ -1,9 +1,7 @@
 // default package
 // Generated 30-mar-2017 11:07:53 by Hibernate Tools 5.2.1.Final
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,177 +20,157 @@ import javax.persistence.TemporalType;
 @Table(name = "control_gui", schema = "comun", catalog = "siisspolweb")
 public class ControlGui implements java.io.Serializable {
 
-	private int idControlGui;
+
+	@Id
+	@Column(name = "id_control_gui", unique = true, nullable = false)
+	private int id;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_tipo_acceso", nullable = false)
 	private TipoAcceso tipoAcceso;
+
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_tipo_control", nullable = false)
 	private TipoControl tipoControl;
+
+	@Column(name = "opcion")
 	private Integer opcion;
+
+
+	@Column(name = "objeto", length = 100)
 	private String objeto;
+
+	@Column(name = "control", nullable = false, length = 100)
 	private String control;
-	private String creacionUsuario;
+
+	@Column(name = "creacion_usuario", nullable = false, length = 20)
+	private String creacionUsuario;}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "creacion_fecha", nullable = false, length = 23)
 	private Date creacionFecha;
+
+	@Column(name = "creacion_equipo", nullable = false, length = 20)
 	private String creacionEquipo;
+
+	@Column(name = "modifica_usuario", nullable = false, length = 20)
 	private String modificaUsuario;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "modifica_fecha", nullable = false, length = 23)
 	private Date modificaFecha;
+
+	@Column(name = "modifica_equipo", nullable = false, length = 20)
 	private String modificaEquipo;
-	private Set<MensajeIdioma> mensajeIdiomas = new HashSet<MensajeIdioma>(0);
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "controlGui")
+	private Collection<MensajeIdioma> mensajeIdiomas = new ArrayList<>();
 
 	public ControlGui() {
 	}
 
-	public ControlGui(int idControlGui, TipoAcceso tipoAcceso, TipoControl tipoControl, String control,
-			String creacionUsuario, Date creacionFecha, String creacionEquipo, String modificaUsuario,
-			Date modificaFecha, String modificaEquipo) {
-		this.idControlGui = idControlGui;
-		this.tipoAcceso = tipoAcceso;
-		this.tipoControl = tipoControl;
-		this.control = control;
-		this.creacionUsuario = creacionUsuario;
-		this.creacionFecha = creacionFecha;
-		this.creacionEquipo = creacionEquipo;
-		this.modificaUsuario = modificaUsuario;
-		this.modificaFecha = modificaFecha;
-		this.modificaEquipo = modificaEquipo;
+	public int getId() {
+		return id;
 	}
 
-	public ControlGui(int idControlGui, TipoAcceso tipoAcceso, TipoControl tipoControl, Integer opcion, String objeto,
-			String control, String creacionUsuario, Date creacionFecha, String creacionEquipo, String modificaUsuario,
-			Date modificaFecha, String modificaEquipo, Set<MensajeIdioma> mensajeIdiomas) {
-		this.idControlGui = idControlGui;
-		this.tipoAcceso = tipoAcceso;
-		this.tipoControl = tipoControl;
-		this.opcion = opcion;
-		this.objeto = objeto;
-		this.control = control;
-		this.creacionUsuario = creacionUsuario;
-		this.creacionFecha = creacionFecha;
-		this.creacionEquipo = creacionEquipo;
-		this.modificaUsuario = modificaUsuario;
-		this.modificaFecha = modificaFecha;
-		this.modificaEquipo = modificaEquipo;
-		this.mensajeIdiomas = mensajeIdiomas;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	@Id
-
-	@Column(name = "id_control_gui", unique = true, nullable = false)
-	public int getIdControlGui() {
-		return this.idControlGui;
-	}
-
-	public void setIdControlGui(int idControlGui) {
-		this.idControlGui = idControlGui;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_tipo_acceso", nullable = false)
 	public TipoAcceso getTipoAcceso() {
-		return this.tipoAcceso;
+		return tipoAcceso;
 	}
 
 	public void setTipoAcceso(TipoAcceso tipoAcceso) {
 		this.tipoAcceso = tipoAcceso;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_tipo_control", nullable = false)
 	public TipoControl getTipoControl() {
-		return this.tipoControl;
+		return tipoControl;
 	}
 
 	public void setTipoControl(TipoControl tipoControl) {
 		this.tipoControl = tipoControl;
 	}
 
-	@Column(name = "opcion")
 	public Integer getOpcion() {
-		return this.opcion;
+		return opcion;
 	}
 
 	public void setOpcion(Integer opcion) {
 		this.opcion = opcion;
 	}
 
-	@Column(name = "objeto", length = 100)
 	public String getObjeto() {
-		return this.objeto;
+		return objeto;
 	}
 
 	public void setObjeto(String objeto) {
 		this.objeto = objeto;
 	}
 
-	@Column(name = "control", nullable = false, length = 100)
 	public String getControl() {
-		return this.control;
+		return control;
 	}
 
 	public void setControl(String control) {
 		this.control = control;
 	}
 
-	@Column(name = "creacion_usuario", nullable = false, length = 20)
 	public String getCreacionUsuario() {
-		return this.creacionUsuario;
+		return creacionUsuario;
 	}
 
 	public void setCreacionUsuario(String creacionUsuario) {
 		this.creacionUsuario = creacionUsuario;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "creacion_fecha", nullable = false, length = 23)
 	public Date getCreacionFecha() {
-		return this.creacionFecha;
+		return creacionFecha;
 	}
 
 	public void setCreacionFecha(Date creacionFecha) {
 		this.creacionFecha = creacionFecha;
 	}
 
-	@Column(name = "creacion_equipo", nullable = false, length = 20)
 	public String getCreacionEquipo() {
-		return this.creacionEquipo;
+		return creacionEquipo;
 	}
 
 	public void setCreacionEquipo(String creacionEquipo) {
 		this.creacionEquipo = creacionEquipo;
 	}
 
-	@Column(name = "modifica_usuario", nullable = false, length = 20)
 	public String getModificaUsuario() {
-		return this.modificaUsuario;
+		return modificaUsuario;
 	}
 
 	public void setModificaUsuario(String modificaUsuario) {
 		this.modificaUsuario = modificaUsuario;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "modifica_fecha", nullable = false, length = 23)
 	public Date getModificaFecha() {
-		return this.modificaFecha;
+		return modificaFecha;
 	}
 
 	public void setModificaFecha(Date modificaFecha) {
 		this.modificaFecha = modificaFecha;
 	}
 
-	@Column(name = "modifica_equipo", nullable = false, length = 20)
 	public String getModificaEquipo() {
-		return this.modificaEquipo;
+		return modificaEquipo;
 	}
 
 	public void setModificaEquipo(String modificaEquipo) {
 		this.modificaEquipo = modificaEquipo;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "controlGui")
-	public Set<MensajeIdioma> getMensajeIdiomas() {
-		return this.mensajeIdiomas;
+	public Collection<MensajeIdioma> getMensajeIdiomas() {
+		return mensajeIdiomas;
 	}
 
-	public void setMensajeIdiomas(Set<MensajeIdioma> mensajeIdiomas) {
+	public void setMensajeIdiomas(Collection<MensajeIdioma> mensajeIdiomas) {
 		this.mensajeIdiomas = mensajeIdiomas;
 	}
-
 }
