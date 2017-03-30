@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8e3860-5fd0-44f9-8c81-01c61f6c75ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/UsuarioPerfil.java" afterPath="$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/UsuarioPerfil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js" afterPath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html" afterPath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-root.iml" afterPath="$PROJECT_DIR$/isspol-root.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/isspol-web.iml" afterPath="$PROJECT_DIR$/isspol-web/isspol-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html" afterPath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html" afterPath="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,59 +27,34 @@
       <file leaf-file-name="UsuarioPerfil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/UsuarioPerfil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3230">
-              <caret line="190" column="48" lean-forward="false" selection-start-line="190" selection-start-column="48" selection-end-line="190" selection-end-column="48" />
+            <state relative-caret-position="68">
+              <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/Usuario.java">
+      <file leaf-file-name="oficinasIsspol.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <element signature="e#304#305#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dwr.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/WEB-INF/dwr.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="67" lean-forward="false" selection-start-line="12" selection-start-column="67" selection-end-line="12" selection-end-column="67" />
+            <state relative-caret-position="67">
+              <caret line="14" column="89" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="89" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nivelOrg.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="96" lean-forward="false" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -87,31 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/blocks/settings.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4369">
-              <caret line="257" column="54" lean-forward="false" selection-start-line="257" selection-start-column="54" selection-end-line="257" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56610">
-              <caret line="3330" column="27" lean-forward="false" selection-start-line="3330" selection-start-column="27" selection-end-line="3330" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="-7241">
+              <caret line="1793" column="12" lean-forward="false" selection-start-line="1793" selection-start-column="5" selection-end-line="1793" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -135,6 +92,7 @@
       <find>core</find>
       <find>bg-black</find>
       <find>bg-info</find>
+      <find>primary</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,8 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/isspol-web/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/isspol-web/src/main/java/ec/com/pyxme/web/config/HibernateAwareObjectMapper.java" />
         <option value="$PROJECT_DIR$/isspol-web/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" />
         <option value="$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/config/HibernateAwareObjectMapper.java" />
         <option value="$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/HomeController.java" />
@@ -199,6 +155,8 @@
         <option value="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html" />
+        <option value="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html" />
+        <option value="$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html" />
       </list>
     </option>
   </component>
@@ -226,10 +184,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-7" />
+    <option name="width" value="1378" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -246,33 +203,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="isspolroot" />
+              <option name="myItemId" value="siispolweb_" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="isspolroot" />
+              <option name="myItemId" value="siispolweb_" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="F:/proyectos/spring-mvc-dwr/spring-mvc-dwr" />
+    <property name="last_opened_file_path" value="F:/siisspolweb" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="hea&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html&#10;home&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/views/home.jsp&#10;POM&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/pom.xml&#10;hom&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/views/home.jsp&#10;sig&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js&#10;dwr&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/dwr.xml&#10;sett&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/settings.html&#10;heade&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html&#10;usuario&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/usuarios_perfiles/usuarioPerfil.html&#10;serv&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" />
+    <property name="SearchEverywhereHistoryKey" value="app.css&#9;FILE&#9;file://F:/siispolweb_/isspol-web/src/main/webapp/resources/theme/css/app.css&#10;nivelOrg&#9;FILE&#9;file://F:/siispolweb_/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html&#10;oficinas&#9;FILE&#9;file://F:/siispolweb_/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html&#10;hea&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html&#10;home&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/views/home.jsp&#10;POM&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/pom.xml&#10;hom&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/views/home.jsp&#10;sig&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/js/controllers/signin.js&#10;dwr&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/dwr.xml&#10;sett&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/settings.html&#10;heade&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/blocks/header.html&#10;usuario&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/usuarios_perfiles/usuarioPerfil.html&#10;serv&#9;FILE&#9;file://C:/Users/santiago.yacelga/IdeaProjects/isspolroot/isspol-web/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -286,7 +243,7 @@
       <recent name="F:\proyectos\isspol-web\isspol-root\isspol-web\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="JBoss Server.jboss7">
+  <component name="RunManager" selected="Tomcat Server.tomcat8">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -793,6 +750,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_isspol-root_2" />
+        <option name="JNDI_PORT" value="1091" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -877,21 +835,22 @@
       <workItem from="1490735445638" duration="176000" />
       <workItem from="1490738600201" duration="31087000" />
       <workItem from="1490884582597" duration="11000" />
+      <workItem from="1490887248375" duration="3086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35785000" />
+    <option name="totallyTimeSpent" value="38871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -899,19 +858,21 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10590015" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10546282" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33504274" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33388704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41709402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41709402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5435898" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15128593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13125949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -920,7 +881,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17606838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -962,20 +922,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/entities/security/TipoOficina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/entities/security/TipoEvento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/entities/security/Sucursal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1165,25 +1111,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/directwebremoting/dwr/2.0.2/dwr-2.0.2.jar!/org/directwebremoting/impl/ExecuteAjaxFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/directwebremoting/dwr/2.0.2/dwr-2.0.2.jar!/org/directwebremoting/impl/DefaultRemoter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="317" column="0" lean-forward="false" selection-start-line="317" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/directwebremoting/dwr/2.0.2/dwr-2.0.2.jar!/org/directwebremoting/impl/ExecuteAjaxFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/directwebremoting/dwr/2.0.2/dwr-2.0.2.jar!/org/directwebremoting/impl/DefaultRemoter.class" />
     <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/WEB-INF/spring/root-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,21 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ec/org/isspol/isspol-route-client/1.0-SNAPSHOT/isspol-route-client-1.0-SNAPSHOT.jar!/ec/org/isspol/route/client/UsuarioServiceClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56610">
-          <caret line="3330" column="27" lean-forward="false" selection-start-line="3330" selection-start-column="27" selection-end-line="3330" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ec/org/isspol/isspol-route-client/1.0-SNAPSHOT/isspol-route-client-1.0-SNAPSHOT.jar!/ec/org/isspol/route/client/UsuarioServiceClient.class" />
     <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/usuarios_perfiles/usuarioPerfil.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1246,30 +1165,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ec/org/isspol/isspol-route-client/1.0-SNAPSHOT/isspol-route-client-1.0-SNAPSHOT.jar!/ec/org/isspol/persistence/entities/security/OficinaSucursal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ec/org/isspol/isspol-route-client/1.0-SNAPSHOT/isspol-route-client-1.0-SNAPSHOT.jar!/ec/org/isspol/persistence/entities/security/OficinaSucursal.class" />
     <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+            <element signature="e#365#366#0" expanded="false" />
+            <element signature="e#393#394#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#455#456#0" expanded="false" />
+            <element signature="e#499#500#0" expanded="false" />
+            <element signature="e#535#536#0" expanded="false" />
+            <element signature="e#570#571#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#689#690#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1293,16 +1206,6 @@
     <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/img/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/UsuarioPerfil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1340,6 +1243,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/java/ec/org/isspol/web/seguridades/UsuarioPerfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/oficinasIsspol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="14" column="89" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/tpl/isspol/seguridades/sucursales_oficinas/nivelOrg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="96" lean-forward="false" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isspol-web/src/main/webapp/resources/theme/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7241">
+          <caret line="1793" column="12" lean-forward="false" selection-start-line="1793" selection-start-column="5" selection-end-line="1793" selection-end-column="12" />
           <folding />
         </state>
       </provider>
