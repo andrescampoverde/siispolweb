@@ -1,21 +1,19 @@
 <div class="bg-light lter b-b wrapper-md">
     <h1 class="m-n font-thin h3">SUCURSALES</h1>
 </div>
-<div class="wrapper-md" ng-controller="SucursalesIsspol as vm">
 
-
-
-            <div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-                <div class="hbox text-left b-b b-light text-sm">
-                    <button ng-if="!vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
+<div ng-controller="SucursalesIsspol as vm">
+         <div class="bg-light lter b-b wrapper-md">
+             <div class="hbox text-left b-b b-light text-sm">
+                    <button ng-if="!vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
                             type="reset" ng-click="vm.nuevaSucursal()">
                         <i class="fa fa-plus"></i>
                         <span>Nuevo</span>
                     </button>
 
                     
-                    <button ng-if="vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-primary btn-addon "
-                            type="submit" ng-click="vm.guardar()">
+                    <button ng-if="vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
+                            type="submit" ng-click="vm.guardar(vm.objSucursal)">
                         <i class="fa fa-save block m-b-xs fa-2x "></i>
                         <span>Guardar</span>
                     </button>
@@ -27,7 +25,7 @@
                     </button>
 
                     <button ng-if="vm.objSucursal && vm.mostarBtnCancelaLin ? true:false"
-                            class="pull-rigth btn m-b-xs btn-sm btn-info btn-addon"
+                            class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
                             type="submit" ng-click="vm.cancelarIngresoLineas()">
                         <i class="fa fa-ban block m-b-xs fa-2x "></i>
                         <span>Cancelar</span>
@@ -99,21 +97,23 @@
                         </div>
                     </div>
 
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="line"></div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">*Nombre: </label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-3">
                             <input type="text" ng-disabled="vm.habilitarCampos" ng-model="vm.objSucursal.nombre"
                                    class="form-control"
                                    placeholder="ingrese el nombre de la sucursal" required/>
                         </div>
                     </div>
 
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+
+                    <div class="line"></div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Usuario
                             Creaci&oacute;n: </label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-3">
                             <input ng-disabled="true" type="text"
                                    ng-model="vm.objSucursal.creacionUsuario" class="form-control"
                                    placeholder="ingrese el nombre de la bodega"/>
@@ -121,7 +121,7 @@
                     </div>
 
 
-                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="line"></div>
                 </div>
 
             </div>
