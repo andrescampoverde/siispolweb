@@ -81,7 +81,7 @@
 <!-- Mapping DWR -->
 
 <script type='text/javascript' src='${pageContext.request.contextPath}/dwr/engine.js'></script>
-<script type='text/javascript' src='${pageContext.request.contextPath}/dwr/interface/UsuarioPerfil.js'></script>
+<script type='text/javascript' src='${pageContext.request.contextPath}/dwr/interface/Usuario.js'></script>
 <script type='text/javascript' src='${pageContext.request.contextPath}/dwr/util.js'></script>
 
 </body>

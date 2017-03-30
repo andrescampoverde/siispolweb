@@ -9,8 +9,8 @@
     </init>
 
     <allow>
-        <create creator="new" javascript="UsuarioPerfil" scope="application">
-            <param name="class" value="ec.org.isspol.web.seguridades.UsuarioPerfil"/>
+        <create creator="new" javascript="Usuario" scope="application">
+            <param name="class" value="ec.org.isspol.web.seguridades.Usuario"/>
             <include method="obtenerOficinasSucursales"/>
             <include method="obtenerHorarios"/>
         </create>
