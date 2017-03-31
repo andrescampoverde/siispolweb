@@ -19,6 +19,7 @@
   <!-- vendor -->
   <link rel="stylesheet" type="text/css" href="vendor/angular/bower_components/ng-notify/dist/ng-notify.min.css"/>
   <link rel="stylesheet" href="vendor/angular/ng-table/ng-table.min.css" />
+  <link rel="stylesheet" href="vendor/angular/angular-block-ui/angular-block-ui.min.css"/>
 
 
 </head>
@@ -77,6 +78,7 @@
 
 <script src="vendor/angular/bower_components/ng-notify/dist/ng-notify.min.js"></script>
 <script src="vendor/angular/ng-table/ng-table.min.js"></script>
+<script src="vendor/angular/angular-block-ui/angular-block-ui.min.js"></script>
 
 <!-- Mapping DWR -->
 

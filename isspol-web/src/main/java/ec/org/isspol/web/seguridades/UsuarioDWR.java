@@ -23,9 +23,10 @@ public class UsuarioDWR implements Serializable {
         return usuario;
     }
 
-    public List<Horario> obtenerHorarios (){
+    public List<Horario> obtenerHorarios  ()throws  Exception{
         UsuarioServiceClient client = (UsuarioServiceClient) ApplicartionContext.getBean("usuarioServiceClient");
         List<Horario> lstHorarios = client.getAllHorario();
+
         return lstHorarios;
     }
 
