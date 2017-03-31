@@ -220,6 +220,12 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
 
         function guardarUsuario  (objUsuario){
+            objUsuario= undefined;
+            objUsuario={
+                usuario:"001",
+                oficina:"KPPP"
+            };
+
             Usuario.guardar(objUsuario,function (data) {
                 controller.lstUsers.push(data);
             });
