@@ -90,20 +90,13 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         };
 
         function cargarHorarios() {
-            controller.lstHorarios = [];
-            var horario = {
-                idHorario:1,
-                descripcion:"Diurno"
-            };
+            console.log("Hola");
+            Usuario.obtenerHorarios(function (data) {
+                controller.lstHorarios = data;
+            });
 
-            controller.lstHorarios.push(horario);
-
-            horario = {
-                idHorario:2,
-                descripcion:"Nocturno"
-            };
-            controller.lstHorarios.push(horario);
         };
+
 
 
         function cargarDashboard() {
@@ -220,62 +213,22 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         };
 
         function cargarEstados() {
-            controller.lstEstado = [];
-            var estado = {
-                id: 1,
-                nombre: "ACTIVO"
-            }
-
-            controller.lstEstado.push(estado);
-
-            estado = {
-                id: 2,
-                nombre: "INACTIVO"
-            }
-
-            controller.lstEstado.push(estado);
-
+            Usuario.obtenerEstados(function (data) {
+                controller.lstEstado = data;
+            });
         };
 
         function cargarOficinas() {
-            controller.lstOficinas = [];
-            var oficina = {
-                idOficina: "1",
-                nombre: "Guayaquil",
-            };
-
-            controller.lstOficinas.push(oficina);
-
-            oficina = {
-                idOficina: "2",
-                nombre: "Quito",
-            };
-
-            controller.lstOficinas.push(oficina);
-
-            oficina = {
-                idOficina: "3",
-                nombre: "Cayambe",
-            };
-
-            controller.lstOficinas.push(oficina);
-
+            Usuario.obtenerOficinas(function (data) {
+                controller.lstOficinas = data;
+            });
         };
 
         function guardarUsuario  (objUsuario){
-            var usr = {
-                idUsuario:objUsuario.idUsuario,
-                nombre:objUsuario.nombre,
-                identificacion:objUsuario.identificacion,
-                oficina:objUsuario.oficina,
-                cargo:objUsuario.cargo,
-                superior:objUsuario.superior,
-                estado:objUsuario.estado,
-                email:objUsuario.email
-            };
 
-            controller.lstUsers.push(usr);
-            //controller.cancelar();
+            Usuario.guardar(objUsuario,function (data) {
+                controller.lstUsers.push(data);
+            });
             ngNotify.set('Exito registro guardado correctamente', 'success');
             controller.cancelarIngresoOficinas();
         };
@@ -438,27 +391,9 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         }
 
         function cargarOficinas() {
-            var oficina = {
-                idOficina:1,
-                nombre:'San Miguel de los Bancos'
-            }
-
-            controller.lstOficinas.push(oficina);
-
-            oficina = {
-                idOficina:2,
-                nombre:'Pedro Vicente Maldonado'
-            }
-
-            controller.lstOficinas.push(oficina);
-
-            oficina = {
-                idOficina:3,
-                nombre:'Puerto Quito'
-            }
-
-            controller.lstOficinas.push(oficina);
-
+            Usuario.obtenerOficinas(function (data) {
+                controller.lstOficinas= data;
+            });
         };
 
 
@@ -516,16 +451,19 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             controller.objUsuario.lstOficinas.splice($index,1);
         };
 
-        cargarEstaciones();
-        cargarEstadosPerfil();
-        cargarPerfiles();
-        cargarSuperiores();
+
+
+
+        //cargarEstaciones();
+        //cargarEstadosPerfil();
+        //cargarPerfiles();
+        //cargarSuperiores();
         cargarOficinas();
         cargarEstados();
-        cargarCargos();
-        cargarActividades();
+        //cargarCargos();
+        //cargarActividades();
         cargarHorarios();
-        cargarDashboard();
+       // cargarDashboard();
 
 
     }

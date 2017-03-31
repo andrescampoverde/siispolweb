@@ -10,11 +10,12 @@
 
     <allow>
         <create creator="new" javascript="Usuario" scope="application">
-            <param name="class" value="ec.org.isspol.web.seguridades.Usuario"/>
+            <param name="class" value="ec.org.isspol.web.seguridades.UsuarioDWR"/>
             <include method="obtenerOficinasSucursales"/>
             <include method="obtenerHorarios"/>
             <include method="obtenerEstados"/>
             <include method="obtenerCargos"/>
+            <include method="guardar"/>
         </create>
 
         <!--<convert converter="bean" match="ec.org.isspol.entities.security.OficinaSucursal"/>-->
