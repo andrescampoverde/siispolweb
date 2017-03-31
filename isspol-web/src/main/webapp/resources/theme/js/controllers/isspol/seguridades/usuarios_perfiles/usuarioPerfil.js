@@ -218,14 +218,8 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
             });
         };
 
-        function cargarOficinas() {
-            Usuario.obtenerOficinas(function (data) {
-                controller.lstOficinas = data;
-            });
-        };
 
         function guardarUsuario  (objUsuario){
-
             Usuario.guardar(objUsuario,function (data) {
                 controller.lstUsers.push(data);
             });
