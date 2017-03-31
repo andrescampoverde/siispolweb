@@ -1,8 +1,8 @@
 /**
  * Created by andres.campoverde on 17/03/2017.
  */
-app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
-    function (ngNotify, $scope, ngTableParams) {
+app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$scope", 'ngTableParams',
+    function (blockUI,usuarioServicio,ngNotify, $scope, ngTableParams) {
 
         controller = this;
         controller.lstUsers = [];
@@ -90,13 +90,15 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         };
 
         function cargarHorarios() {
-            console.log("Hola");
-            Usuario.obtenerHorarios(function (data) {
+            var respuesta = usuarioServicio.obtenerHorarios();
+            respuesta.then(function (data) {
                 controller.lstHorarios = data;
+            },function (error) {
+                console.log(error);
+                ngNotify.set('Hubo un error al cargar los horarios', 'error');
             });
 
         };
-
 
 
         function cargarDashboard() {
@@ -213,13 +215,18 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         };
 
         function cargarEstados() {
-            Usuario.obtenerEstados(function (data) {
+            var respuesta = usuarioServicio.obtenerEstados();
+            respuesta.then(function (data) {
                 controller.lstEstado = data;
+            },function (error) {
+                console.log(error);
+                ngNotify.set('Hubo un error al cargar los estados', 'error');
             });
         };
 
 
         function guardarUsuario  (objUsuario){
+            blockUI.start();
             objUsuario= undefined;
             objUsuario={
                 usuario:"001",
@@ -228,6 +235,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
 
             Usuario.guardar(objUsuario,function (data) {
                 controller.lstUsers.push(data);
+                blockUI.stop();
             });
             ngNotify.set('Exito registro guardado correctamente', 'success');
             controller.cancelarIngresoOficinas();
@@ -391,8 +399,12 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         }
 
         function cargarOficinas() {
-            Usuario.obtenerOficinasSucursales(function (data) {
-                controller.lstOficinas= data;
+            var respuesta = usuarioServicio.obtenerOficinasSucursales();
+            respuesta.then(function (data) {
+                controller.lstOficinas = data;
+            },function (error) {
+                console.log(error);
+                ngNotify.set('Hubo un error al cargar las oficinas', 'error');
             });
         };
 

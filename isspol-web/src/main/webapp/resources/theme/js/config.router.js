@@ -138,6 +138,7 @@ angular.module('app')
                       deps: ['$ocLazyLoad',
                           function (uiLoad) {
                               return uiLoad.load([
+                                  'js/services/servicio-usuario.js',
                                   'js/controllers/isspol/seguridades/usuarios_perfiles/usuarioPerfil.js']);
                           }]
                   }
