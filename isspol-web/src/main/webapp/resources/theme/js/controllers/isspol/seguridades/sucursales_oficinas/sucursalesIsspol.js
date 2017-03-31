@@ -10,12 +10,22 @@
  * Created by esyacelga
  */
 
-app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams',
-    function( ngNotify,  $scope , ngTableParams) {
+app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams','$http', '$state',
+    function( ngNotify,  $scope , ngTableParams,$http, $state) {
 
         controller = this;
         controller.lstSuc= [];
 
+        $scope.user = {};
+        $scope.authError = null;
+        function obtenerOficinas () {
+            $scope.oficinaSucursal = {};
+            Usuario.obtenerOficinasSucursales(callbackObtenerOficinas);
+        };
+
+        var callbackObtenerOficinas = function(data){
+            console.log(data);
+        };
 
         controller.nuevaSucursal = function (){
             controller.objSucursal = {
@@ -65,5 +75,6 @@ app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams',
         };
 
         iniciarFormulario ();
+        obtenerOficinas();
 
     }]);

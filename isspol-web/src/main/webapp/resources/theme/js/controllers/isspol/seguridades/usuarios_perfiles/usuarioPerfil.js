@@ -11,6 +11,17 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
 
         controller.mostarBtnCancelaLin= false;
 
+        function obtenerListasDropDownUsuarios() {
+            Usuario.obtenerCargos(callbackObtenerDatos);
+            Usuario.obtenerOficinasSucursales(callbackObtenerDatos);
+            Usuario.obtenerEstados(callbackObtenerDatos);
+            Usuario.obtenerHorarios(callbackObtenerDatos);
+        }
+
+        var callbackObtenerDatos=function (data) {
+            console.log(data);
+        }
+
         controller.notificacionBloqueo=function () {
             var validacion=document.formUsuarios.reportValidity();
             if(!validacion){
@@ -462,9 +473,6 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         controller.eliminarOficina= function ($index) {
             controller.objUsuario.lstOficinas.splice($index,1);
         };
-
-
-
 
         //cargarEstaciones();
         //cargarEstadosPerfil();
