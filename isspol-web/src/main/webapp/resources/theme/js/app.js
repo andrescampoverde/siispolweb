@@ -17,4 +17,5 @@ angular.module('app', [
     'pascalprecht.translate',
     'ngTable',
     'ngNotify',
+    'blockUI',
 ]);
