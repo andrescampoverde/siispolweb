@@ -11,7 +11,7 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
 
         controller.mostarBtnCancelaLin= false;
 
-        function obtenerListasDropDownUsuarios() {
+        /*function obtenerListasDropDownUsuarios() {
             Usuario.obtenerCargos(callbackObtenerDatos);
             Usuario.obtenerOficinasSucursales(callbackObtenerDatos);
             Usuario.obtenerEstados(callbackObtenerDatos);
@@ -20,7 +20,7 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
 
         var callbackObtenerDatos=function (data) {
             console.log(data);
-        }
+        }*/
 
         controller.notificacionBloqueo=function () {
             var validacion=document.formUsuarios.reportValidity();
@@ -424,7 +424,11 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
             controller.objUsuario.lstOficinas.push(objOficina);
         };
 
-
+        function insertarUsuario() {
+            Usuario.insertarUsuario(controller.objUsuario,function (data) {
+                console.log(data);
+            });
+        };
 
         controller.cancelarIngresoOficinas = function () {
             controller.object  = undefined;
@@ -484,7 +488,7 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         //cargarActividades();
         cargarHorarios();
         // cargarDashboard();
-
+        insertarUsuario();
 
     }
 ]);
