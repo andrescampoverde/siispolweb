@@ -391,7 +391,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         }
 
         function cargarOficinas() {
-            Usuario.obtenerOficinas(function (data) {
+            Usuario.obtenerOficinasSucursales(function (data) {
                 controller.lstOficinas= data;
             });
         };
@@ -463,7 +463,7 @@ app.controller('UsuariosPerfiles', ['ngNotify', "$scope", 'ngTableParams',
         //cargarCargos();
         //cargarActividades();
         cargarHorarios();
-       // cargarDashboard();
+        // cargarDashboard();
 
 
     }
