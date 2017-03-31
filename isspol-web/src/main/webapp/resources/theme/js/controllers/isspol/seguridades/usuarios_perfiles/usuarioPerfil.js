@@ -430,6 +430,12 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
             });
         };
 
+        function actualizarUsuario() {
+            Usuario.updateUserSP(controller.objUsuario,function (data) {
+                console.log(data);
+            })
+        }
+
         controller.cancelarIngresoOficinas = function () {
             controller.object  = undefined;
         };
@@ -488,7 +494,7 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         //cargarActividades();
         cargarHorarios();
         // cargarDashboard();
-        insertarUsuario();
-
+        // insertarUsuario();
+actualizarUsuario();
     }
 ]);

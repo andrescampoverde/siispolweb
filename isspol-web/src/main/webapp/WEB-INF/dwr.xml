@@ -17,6 +17,7 @@
             <include method="obtenerCargos"/>
             <include method="guardar"/>
             <include method="insertarUsuario"/>
+            <include method="updateUserSP"/>
         </create>
 
 
