@@ -18,6 +18,11 @@ app.controller("CiudadesIsspol",['ngNotify',"$scope", 'ngTableParams',
         controller.lstTipos = [];
 
 
+
+        controller.visualiazarObjeto= function (objeto) {
+            controller.objeto= objeto;
+        };
+
         controller.nuevaCiudad = function (){
             controller.ciudad = {
 
@@ -38,6 +43,7 @@ app.controller("CiudadesIsspol",['ngNotify',"$scope", 'ngTableParams',
 
         controller.cancelar = function (){
             controller.ciudad = undefined;
+            controller.objeto= undefined;
         };
 
         controller.guardar = function (ciudad){
