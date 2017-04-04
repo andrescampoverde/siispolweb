@@ -27,6 +27,10 @@ app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams','$http',
             console.log(data);
         };
 
+        controller.visualiazaSucursales = function (objeto) {
+            controller.sucursalObj= objeto;
+        };
+
         controller.nuevaSucursal = function (){
             controller.objSucursal = {
 
@@ -49,6 +53,7 @@ app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams','$http',
 
         controller.cancelar = function (){
             controller.objSucursal = undefined;
+            controller.sucursalObj = undefined;
         };
 
         controller.guardar = function (objSucursal){
