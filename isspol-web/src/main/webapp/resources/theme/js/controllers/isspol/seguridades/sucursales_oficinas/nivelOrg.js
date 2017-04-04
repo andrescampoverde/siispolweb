@@ -12,7 +12,12 @@ app.controller("NivelOrganizacional",['ngNotify',"$scope", 'ngTableParams',
             controller.objNivel={
 
             }
-        }
+        };
+
+        controller.visualiazarObjeto= function (objeto) {
+            controller.objeto= objeto;
+        };
+
 
         controller.insertarnivel=function(objNivel){
             // var f=new Date();
@@ -51,7 +56,8 @@ app.controller("NivelOrganizacional",['ngNotify',"$scope", 'ngTableParams',
         }
 
         controller.cancelar=function(){
-            controller.objNivel=undefined
+            controller.objNivel=undefined;
+            controller.objeto= undefined;
         }
 
         function inicioFormulario(){
