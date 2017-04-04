@@ -22,6 +22,10 @@ app.controller("OficinasIsspol",['ngNotify',"$scope", 'ngTableParams',
             controller.objOficina = {}
         };
 
+        controller.visualiazarOficinas=function (objeto) {
+            controller.objOficinaVi= objeto;
+        }
+
         controller.editarOficina = function(objOficina,$index){
             controller.lstOficinas.splice($index,1);
             controller.objOficina= objOficina;
@@ -34,6 +38,7 @@ app.controller("OficinasIsspol",['ngNotify',"$scope", 'ngTableParams',
 
         controller.cancelar = function(){
             controller.objOficina = undefined;
+            controller.objOficinaVi=undefined;
         };
 
         controller.guardar = function(objOficina){
