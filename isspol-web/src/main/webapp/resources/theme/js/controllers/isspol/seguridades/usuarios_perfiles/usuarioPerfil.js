@@ -101,13 +101,19 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         };
 
         function cargarHorarios() {
-            var respuesta = usuarioServicio.obtenerHorarios();
-            respuesta.then(function (data) {
-                controller.lstHorarios = data;
-            },function (error) {
-                console.log(error);
-                ngNotify.set('Hubo un error al cargar los horarios', 'error');
-            });
+            controller.lstHorarios = [];
+            var horario = {
+                idHorario:1,
+                descripcion:"Diurno"
+            };
+
+            controller.lstHorarios.push(horario);
+
+            horario = {
+                idHorario:2,
+                descripcion:"Nocturno"
+            };
+            controller.lstHorarios.push(horario);
 
         };
 
@@ -226,30 +232,39 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         };
 
         function cargarEstados() {
-            var respuesta = usuarioServicio.obtenerEstados();
-            respuesta.then(function (data) {
-                controller.lstEstado = data;
-            },function (error) {
-                console.log(error);
-                ngNotify.set('Hubo un error al cargar los estados', 'error');
-            });
+            controller.lstEstado = [];
+            var estado = {
+                idEstadoUsuario: 1,
+                descripcion: "ACTIVO"
+            }
+
+            controller.lstEstado.push(estado);
+
+            estado = {
+                idEstadoUsuario: 2,
+                descripcion: "INACTIVO"
+            }
+
+            controller.lstEstado.push(estado);
         };
 
 
         function guardarUsuario  (objUsuario){
-            blockUI.start();
-            objUsuario= undefined;
-            objUsuario={
-                usuario:"001",
-                oficina:"KPPP"
-            };
-
-            Usuario.guardar(objUsuario,function (data) {
-                controller.lstUsers.push(data);
-                blockUI.stop();
-            });
+            controller.lstUsers.push(objUsuario);
             ngNotify.set('Exito registro guardado correctamente', 'success');
-            controller.cancelarIngresoOficinas();
+            // blockUI.start();
+            // objUsuario= undefined;
+            // objUsuario={
+            //     usuario:"001",
+            //     oficina:"KPPP"
+            // };
+            //
+            // Usuario.guardar(objUsuario,function (data) {
+            //     controller.lstUsers.push(data);
+            //     blockUI.stop();
+            // });
+            // ngNotify.set('Exito registro guardado correctamente', 'success');
+            // controller.cancelarIngresoOficinas();
         };
 
 
@@ -305,6 +320,7 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         };
 
         controller.seleccionarTab = function (steep) {
+            controller.activarFoto= steep;
             seleccionFuncion = steep;
         };
 
@@ -410,13 +426,27 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
         }
 
         function cargarOficinas() {
-            var respuesta = usuarioServicio.obtenerOficinasSucursales();
-            respuesta.then(function (data) {
-                controller.lstOficinas = data;
-            },function (error) {
-                console.log(error);
-                ngNotify.set('Hubo un error al cargar las oficinas', 'error');
-            });
+            controller.lstOficinas = [];
+            var oficina = {
+                idOficina: "1",
+                nombre: "Guayaquil",
+            };
+
+            controller.lstOficinas.push(oficina);
+
+            oficina = {
+                idOficina: "2",
+                nombre: "Quito",
+            };
+
+            controller.lstOficinas.push(oficina);
+
+            oficina = {
+                idOficina: "3",
+                nombre: "Cayambe",
+            };
+
+            controller.lstOficinas.push(oficina);
         };
 
 
@@ -484,17 +514,17 @@ app.controller('UsuariosPerfiles', ['blockUI','servicio-usuario','ngNotify', "$s
             controller.objUsuario.lstOficinas.splice($index,1);
         };
 
-        //cargarEstaciones();
-        //cargarEstadosPerfil();
-        //cargarPerfiles();
-        //cargarSuperiores();
+        cargarEstaciones();
+        cargarEstadosPerfil();
+        cargarPerfiles();
+        cargarSuperiores();
         cargarOficinas();
         cargarEstados();
-        //cargarCargos();
-        //cargarActividades();
+        cargarCargos();
+        cargarActividades();
         cargarHorarios();
-        // cargarDashboard();
+         cargarDashboard();
         // insertarUsuario();
-actualizarUsuario();
+       // actualizarUsuario();
     }
 ]);

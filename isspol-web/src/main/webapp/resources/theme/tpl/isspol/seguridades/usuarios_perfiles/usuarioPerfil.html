@@ -42,6 +42,7 @@
 
 
     <div ng-if="!vm.objUsuario" class="panel panel-defaul panel-body">
+
         <table class="table table-condensed table-bordered table-striped">
 
             <thead>
@@ -84,50 +85,52 @@
     </div>
 
 
-    <div class="panel bg-light " ng-if="vm.objUsuario" >
+    <div class="panel bg-light " ng-if="vm.objUsuario">
         <div class="row">
             <div class="col-sm-9">
                 <tabset class="tab-container" ng-init="steps={step1:true, step2:false, step3:false}">
 
 
                     <tab heading="USUARIOS" select="vm.seleccionarTab(1);">
-
                         <form id="formUsuarios" name="formUsuarios" class="form-validation">
-
-
-                            <div >
-
-                                <div class="line"/>
+                            <div>
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            Id:
+                                            Id
                                         </label>
                                         <div>
-                                            <input type="number" ng-model="vm.objUsuario.idUsuario" class="form-control" required>
+                                            <input type="number" ng-model="vm.objUsuario.idUsuario" class="form-control"
+                                                   required>
                                         </div>
 
                                     </div>
 
                                 </div>
+
+                                <div class="line-sm"/>
+
                                 <div class="row">
 
                                     <div class="col-sm-10">
                                         <label class="l-h-0x" style="height: 10%;">
-                                            * Usuario:
+                                            * Usuario
                                         </label>
 
-                                        <div >
+                                        <div>
                                             <input ng-model="vm.objUsuario.nombre" class="col-0 form-control" required>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="line-sm"/>
+
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            * Estado:
+                                            * Estado
                                         </label>
-                                        <div >
+                                        <div>
                                             <div>
                                                 <select class="form-control"
                                                         ng-options="estado.descripcion for estado in vm.lstEstado track by estado.idEstadoUsuario"
@@ -139,24 +142,27 @@
 
 
                                 </div>
+
+                                <div class="line-sm"/>
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            * N&uacute;mero Identificaci&oacute;n:
+                                            * N&uacute;mero Identificaci&oacute;n
                                         </label>
-                                        <div >
-                                            <input mask="9999999999" ng-model="vm.objUsuario.identificacion" class="form-control"
+                                        <div>
+                                            <input mask="9999999999" ng-model="vm.objUsuario.identificacion"
+                                                   class="form-control"
                                                    required>
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="line-sm"/>
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
                                             e-mail:
                                         </label>
-                                        <div >
+                                        <div>
                                             <input ng-model="vm.objUsuario.email" type="email" class="form-control">
                                         </div>
 
@@ -164,30 +170,34 @@
 
                                 </div>
 
+                                <div class="line-sm"/>
+
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            * Oficina:
+                                            * Oficina
                                         </label>
-                                        <div >
+                                        <div>
                                             <div>
                                                 <select class="form-control"
-                                                        ng-options="oficina.nombre for oficina in vm.lstOficinas track by oficina.oficina"
+                                                        ng-options="oficina.nombre for oficina in vm.lstOficinas track by oficina.idOficina"
                                                         ng-model="vm.objUsuario.oficina"></select>
                                             </div>
                                         </div>
                                     </div>
 
 
-
                                 </div>
+
+                                <div class="line-sm"/>
+
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            * Cargo:
+                                            * Cargo
                                         </label>
 
-                                        <div >
+                                        <div>
                                             <div>
                                                 <select class="form-control"
                                                         ng-options="cargo.nombre for cargo in vm.lstCargos track by cargo.id"
@@ -197,12 +207,14 @@
                                     </div>
                                 </div>
 
+
+                                <div class="line-sm"/>
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <label class="l-h-0x">
-                                            *Superior:
+                                            *Superior
                                         </label>
-                                        <div >
+                                        <div>
                                             <div>
                                                 <select class="form-control"
                                                         ng-options="superior.nombre for superior in vm.lstSuperiores track by superior.idUsuario"
@@ -214,6 +226,8 @@
                                 </div>
                             </div>
 
+
+                            <div class="line-sm"/>
                             <div>
                                 <div ng-init="vm.accessConfig=false">
                                     <label class="col-sm-10 font-bold"> CONFIGURAR ACCESO</label>
@@ -242,7 +256,7 @@
                                     <div class="line"></div>
                                     <div class="form-group">
                                         <label class="col-sm-10 control-label">Horario:</label>
-                                        <div >
+                                        <div>
                                             <select class="form-control"
                                                     ng-options="horario.descripcion for horario in vm.lstHorarios track by horario.idHorario"
                                                     ng-model="vm.objUsuario.horario"></select>
@@ -263,7 +277,8 @@
                                     <div class="form-group">
                                         <label class="col-sm-10 control-label">Tiempo de inactividad:</label>
                                         <div>
-                                            <input type="number" class="form-control" ng-model="vm.objUsuario.tiempoInactividad"/>
+                                            <input type="number" class="form-control"
+                                                   ng-model="vm.objUsuario.tiempoInactividad"/>
                                         </div>
                                     </div>
 
@@ -273,14 +288,14 @@
 
 
                             <div class="line"></div>
-                            <div >
-                                <div ng-init="vm.password=false" >
+                            <div>
+                                <div ng-init="vm.password=false">
 
                                     <label class="col-sm-10 font-bold">CONTRASE&Ntilde;A</label>
                                     <div class="line"></div>
-                                    <div >
+                                    <div>
                                         <label class="i-switch i-switch-md bg-info m-t-xs m-r"> <input
-                                                ng-model="vm.password" type="checkbox" checked /> <i></i>
+                                                ng-model="vm.password" type="checkbox" checked/> <i></i>
                                         </label>
                                     </div>
 
@@ -290,9 +305,10 @@
 
                                     <div class="line"></div>
                                     <div class="form-group">
-                                        <label class="col-sm-10 control-label">Usuario debe cambiar el password desde el pr&oacute;ximo
+                                        <label class="col-sm-10 control-label">Usuario debe cambiar el password desde el
+                                            pr&oacute;ximo
                                             logon</label>
-                                        <div >
+                                        <div>
                                             <label class="i-switch i-switch-md bg-primary m-t-xs m-r">
                                                 <input ng-model="vm.objUsuario.modificarPassword"
                                                        type="checkbox" checked> <i></i>
@@ -303,8 +319,9 @@
 
                                     <div class="line"></div>
                                     <div class="form-group">
-                                        <label class="col-sm-10 control-label">Usuario no puede cambiar el password</label>
-                                        <div >
+                                        <label class="col-sm-10 control-label">Usuario no puede cambiar el
+                                            password</label>
+                                        <div>
                                             <label class="i-switch i-switch-md bg-primary m-t-xs m-r">
                                                 <input ng-model="vm.objUsuario.nomodificarPassword"
                                                        type="checkbox" checked> <i></i>
@@ -329,322 +346,333 @@
 
 
                         </form>
-
-
                     </tab>
 
-            <tab heading="PERFILES" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(2);"
-                 ng-click="vm.notificacionBloqueo();">
-                <form id="formPerfiles" name="formPerfiles" class="form-validation">
+                    <tab heading="PERFILES" select="vm.seleccionarTab(2);"
+                         ng-click="vm.notificacionBloqueo();">
 
-                    <div ng-if="vm.usrPerfil" class="panel  b-a bg-light lt has-success wrapper-md">
-
-                        <div class="line"/>
-                        <div class="row  ">
-
-
-                            <div class="col-lg-1">
-                                <label>
-                                    PERFIL:
-                                </label>
-                            </div>
-
-                            <div class="col-lg-2-4 ">
-                                <select class="form-control"
-                                        ng-options="perfil.nombrePerfil for perfil in vm.lstPerfiles track by perfil.idPerfil"
-                                        ng-model="vm.usrPerfil.perfil"></select>
-                            </div>
-
-                        </div>
-
-
-                        <div class="line"/>
-                        <div class="row  ">
-
-                            <div class="col-lg-1">
-                                <label>
-                                    ESTADO:
-                                </label>
-                            </div>
-
-                            <div class="col-lg-2-4 ">
-                                <select class="form-control"
-                                        ng-options="estado.nombre for estado in vm.lstEstado track by estado.id"
-                                        ng-model="vm.usrPerfil.estado"></select>
-                            </div>
-                        </div>
-
-                        <div class="line"/>
-                        <div class="row  ">
-
-                            <div class="col-lg-1">
-                                <label>
-                                    TIENE VENCIMIENTO:
-                                </label>
-                            </div>
-
-                            <div class="col-lg-2-4 ">
-                                <label class="i-switch i-switch-md bg-info m-t-xs m-r">
-                                    <input type="checkbox" ng-model="vm.usrPerfil.vencimiento" checked/>
-                                    <i></i>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="line"/>
-                        <div ng-if="vm.usrPerfil.vencimiento" class="row">
-
-                            <div class="col-lg-1">
-                                <label>
-                                    FECHA VENCIMIENTO:
-                                </label>
-                            </div>
-
-                            <div class="col-lg-2-4 ">
-                                <input ng-model="vm.usrPerfil.fechaVencimiento" type="date"
-                                       placeholder=" a&ntilde;o /mes/d&iacute;a" class="col-sm-3 form-control" required>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                    <div ng-if="!vm.usrPerfil" class="panel panel-defaul panel-body">
-
-                        <div>
-
-                            <table class="table table-condensed table-bordered table-striped" show-filter="true">
-
-                                <thead>
-                                <tr>
-                                    <th>Perfil</th>
-                                    <th>Estado</th>
-                                    <th>Vencimiento</th>
-                                    <th>Fecha de vencimiento</th>
-                                    <th>Creaci&oacute;n usuario</th>
-                                    <th>Creaci&oacute;n fecha</th>
-                                </tr>
-                                </thead>
-
-                                <tr ng-repeat="iterador in vm.objUsuario.lstPerfiles">
-                                    <td class="text-center" data-title="TIPO">{{iterador.perfil.nombrePerfil}}</td>
-                                    <td class="text-center" data-title="ANTERIOR">{{iterador.estado.nombre}}</td>
-                                    <td class="text-center" data-title="VENCIMIENTO">{{iterador.vencimiento ==
-                                        true?'Si':'No'}}
-                                    </td>
-                                    <td class="text-center" data-title="FECHAVENCIMIENTO">
-                                        {{iterador.fechaVencimiento}}
-                                    </td>
-                                    <td class="text-center" data-title="CREACIONUSUARIO">
-                                        {{iterador.creacionUsuario.nombre}}
-                                    </td>
-                                    <td class="text-center" data-title="CREACIONFECHA">{{iterador.creacionFecha}}</td>
-                                    <td>
-                                        <div class="text-center">
-                                            <button class="btn btn-info btn-xs"
-                                                    ng-click="vm.editarPerfil(iterador,$index)">
-                                                <i class="glyphicon glyphicon-edit"></i>
-                                            </button>
-                                            <button class="btn btn-danger btn-xs"
-                                                    ng-click="vm.eliminarPerfil($index)">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                            </button>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-
-                </form>
-
-            </tab>
-
-            <tab heading="ESTACIONES" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(3);"
-                 ng-click="vm.notificacionBloqueo();">
-
-                <form id="formEstaciones" name="formEstaciones" class="form-validation">
-
-                    <div ng-if="vm.usrEstacion" class="panel  b-a bg-light lt has-success wrapper-md">
-                        <div class="alert alert-info">
-                            <strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
-                        </div>
-                        <div class="line"/>
-                        <div class="row  ">
-
-                            <div class="col-lg-1">
-                                <label>
-                                    *Estaci&oacute;n:
-                                </label>
-                            </div>
-
-                            <div class="col-lg-2-4 ">
-                                <select class="form-control"
-                                        ng-options="estacion.descripcion for estacion in vm.lstEstaciones track by estacion.idEstacion"
-                                        ng-model="vm.usrEstacion.estacion"></select>
-                            </div>
-
-                            <div class="line"/>
-                        </div>
-                    </div>
-                    <div ng-if="!vm.usrEstacion" class="panel panel-defaul panel-body">
-
-                        <div>
-
-                            <table class="table table-condensed table-bordered table-striped" show-filter="true">
-
-                                <thead>
-                                <tr>
-                                    <th>Estacion</th>
-                                    <th>Fecha Creacion</th>
-                                    <th>Creaci&oacute;n usuario</th>
-                                    <th>Fecha Modificacion</th>
-                                    <th>Usuario Modificacion</th>
-
-                                </tr>
-                                </thead>
-
-                                <tr ng-repeat="iterador in vm.objUsuario.lstEstaciones">
-                                    <td class="text-center" data-title="ESTACION">{{iterador.estacion.descripcion}}</td>
-                                    <td class="text-center" data-title="FECHA CREACION">{{iterador.creacionFecha}}</td>
-                                    <td class="text-center" data-title="USUARIO CREACION">
-                                        {{iterador.creacionUsuario.nombre}}
-                                    </td>
-                                    <td class="text-center" data-title="FECHA MODIFICACION">{{iterador.creacionFecha}}
-                                    </td>
-                                    <td class="text-center" data-title="USUARIO MODIFICACION">
-                                        {{iterador.creacionUsuario.nombre}}
-                                    </td>
-                                    <td>
-                                        <div class="text-center">
-                                            <button class="btn btn-info btn-xs"
-                                                    ng-click="vm.editarEstacion(iterador,$index)">
-                                                <i class="glyphicon glyphicon-edit"></i>
-                                            </button>
-                                            <button class="btn btn-danger btn-xs"
-                                                    ng-click="vm.eliminarEstacion($index)">
-                                                <i class="glyphicon glyphicon-trash"></i>
-                                            </button>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                    </div>
-
-                </form>
-            </tab>
-
-            <tab heading="ACTIVIDAD" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(4);"
-                 ng-click="vm.notificacionBloqueo();">
-
-                <div class="panel panel-defaul panel-body">
-
-                    <div>
-
-                        <table class="table table-condensed table-bordered table-striped" show-filter="true">
-
-                            <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Anterior</th>
-                                <th>Nuevo</th>
-                                <th>Creaci&oacute;n usuario</th>
-                                <th>Creaci&oacute;n fecha</th>
-                            </tr>
-                            </thead>
-
-                            <tr ng-repeat="iterador in vm.logActividades">
-                                <td class="text-center" data-title="TIPO">{{iterador.tipoActividad}}</td>
-                                <td class="text-center" data-title="ANTERIOR">{{iterador.anteriorActividad}}</td>
-                                <td class="text-center" data-title="NUEVO">{{iterador.nuevoActividad}}</td>
-                                <td class="text-center" data-title="CREACIONUSUARIO">
-                                    {{iterador.creacionUsuarioActividad}}
-                                </td>
-                                <td class="text-center" data-title="CREACIONFECHA">{{iterador.creacionFechaActividad}}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
-                </div>
-            </tab>
-
-            <tab heading="OFICINAS" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(5);"
-                 ng-click="vm.notificacionBloqueo();">
-
-                <form id="formOficinas" name="formOficinas" class="form-validation">
-
-                    <div ng-if="vm.object" class="panel  b-a bg-light lt has-success wrapper-md">
-                        <div>
-                            <div class="has-success">
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Oficina: </label>
+                        <form id="formPerfiles" name="formPerfiles" class="form-validation">
+                            <div ng-if="vm.usrPerfil" class="panel   wrapper-md">
+                                <div class="row  ">
                                     <div class="col-sm-10">
-                                        <select class="form-control" name="mySelect"
-                                                ng-options="oficina.nombre for oficina in vm.lstOficinas track by oficina.idOficina"
-                                                ng-model="vm.object.oficina"></select>
+                                        <label>
+                                            PERFIL:
+                                        </label>
+                                    </div>
+
+                                    <div >
+                                        <select class="form-control"
+                                                ng-options="perfil.nombrePerfil for perfil in vm.lstPerfiles track by perfil.idPerfil"
+                                                ng-model="vm.usrPerfil.perfil"></select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="line"/>
+                                <div class="row  ">
+
+                                    <div class="col-sm-10">
+                                        <label>
+                                            ESTADO:
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <select class="form-control"
+                                                ng-options="estado.nombreEstado for estado in vm.lstEstadoPerfil track by estado.idEstado"
+                                                ng-model="vm.usrPerfil.estado"></select>
                                     </div>
                                 </div>
 
+                                <div class="line"/>
+                                <div class="row  ">
+
+                                    <div class="col-sm-10">
+                                        <label>
+                                            TIENE VENCIMIENTO:
+                                        </label>
+                                    </div>
+
+                                    <div >
+                                        <label class="i-switch i-switch-md bg-info m-t-xs m-r">
+                                            <input type="checkbox" ng-model="vm.usrPerfil.vencimiento" checked/>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="line"/>
+                                <div ng-if="vm.usrPerfil.vencimiento" class="row">
+
+                                    <div class="col-lg-1">
+                                        <label>
+                                            FECHA VENCIMIENTO:
+                                        </label>
+                                    </div>
+
+                                    <div class="col-lg-2-4 ">
+                                        <input ng-model="vm.usrPerfil.fechaVencimiento" type="date"
+                                               placeholder=" a&ntilde;o /mes/d&iacute;a" class="col-sm-3 form-control"
+                                               required>
+                                    </div>
+                                </div>
+
+
                             </div>
+
+
+                            <div ng-if="!vm.usrPerfil" class="panel panel-defaul panel-body">
+
+                                <div>
+
+                                    <table class="table table-condensed table-bordered table-striped"
+                                           show-filter="true">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Perfil</th>
+                                            <th>Estado</th>
+                                            <th>Vencimiento</th>
+                                            <th>Fecha de vencimiento</th>
+                                            <th>Creaci&oacute;n usuario</th>
+                                            <th>Creaci&oacute;n fecha</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tr ng-repeat="iterador in vm.objUsuario.lstPerfiles">
+                                            <td class="text-center" data-title="TIPO">{{iterador.perfil.nombrePerfil}}
+                                            </td>
+                                            <td class="text-center" data-title="ANTERIOR">{{iterador.estado.nombre}}
+                                            </td>
+                                            <td class="text-center" data-title="VENCIMIENTO">{{iterador.vencimiento ==
+                                                true?'Si':'No'}}
+                                            </td>
+                                            <td class="text-center" data-title="FECHAVENCIMIENTO">
+                                                {{iterador.fechaVencimiento}}
+                                            </td>
+                                            <td class="text-center" data-title="CREACIONUSUARIO">
+                                                {{iterador.creacionUsuario.nombre}}
+                                            </td>
+                                            <td class="text-center" data-title="CREACIONFECHA">
+                                                {{iterador.creacionFecha}}
+                                            </td>
+                                            <td>
+                                                <div class="text-center">
+                                                    <button class="btn btn-info btn-xs"
+                                                            ng-click="vm.editarPerfil(iterador,$index)">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-xs"
+                                                            ng-click="vm.eliminarPerfil($index)">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </tab>
+
+                    <tab heading="ESTACIONES" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(3);"
+                         ng-click="vm.notificacionBloqueo();">
+
+                        <form id="formEstaciones" name="formEstaciones" class="form-validation">
+
+                            <div ng-if="vm.usrEstacion" class="panel  b-a bg-light lt has-success wrapper-md">
+                                <div class="alert alert-info">
+                                    <strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
+                                </div>
+                                <div class="line"/>
+                                <div class="row  ">
+
+                                    <div class="col-lg-1">
+                                        <label>
+                                            *Estaci&oacute;n:
+                                        </label>
+                                    </div>
+
+                                    <div class="col-lg-2-4 ">
+                                        <select class="form-control"
+                                                ng-options="estacion.descripcion for estacion in vm.lstEstaciones track by estacion.idEstacion"
+                                                ng-model="vm.usrEstacion.estacion"></select>
+                                    </div>
+
+                                    <div class="line"/>
+                                </div>
+                            </div>
+                            <div ng-if="!vm.usrEstacion" class="panel panel-defaul panel-body">
+
+                                <div>
+
+                                    <table class="table table-condensed table-bordered table-striped"
+                                           show-filter="true">
+
+                                        <thead>
+                                        <tr>
+                                            <th>Estacion</th>
+                                            <th>Fecha Creacion</th>
+                                            <th>Creaci&oacute;n usuario</th>
+                                            <th>Fecha Modificacion</th>
+                                            <th>Usuario Modificacion</th>
+
+                                        </tr>
+                                        </thead>
+
+                                        <tr ng-repeat="iterador in vm.objUsuario.lstEstaciones">
+                                            <td class="text-center" data-title="ESTACION">
+                                                {{iterador.estacion.descripcion}}
+                                            </td>
+                                            <td class="text-center" data-title="FECHA CREACION">
+                                                {{iterador.creacionFecha}}
+                                            </td>
+                                            <td class="text-center" data-title="USUARIO CREACION">
+                                                {{iterador.creacionUsuario.nombre}}
+                                            </td>
+                                            <td class="text-center" data-title="FECHA MODIFICACION">
+                                                {{iterador.creacionFecha}}
+                                            </td>
+                                            <td class="text-center" data-title="USUARIO MODIFICACION">
+                                                {{iterador.creacionUsuario.nombre}}
+                                            </td>
+                                            <td>
+                                                <div class="text-center">
+                                                    <button class="btn btn-info btn-xs"
+                                                            ng-click="vm.editarEstacion(iterador,$index)">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-xs"
+                                                            ng-click="vm.eliminarEstacion($index)">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </tab>
+
+                    <tab heading="ACTIVIDAD" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(4);"
+                         ng-click="vm.notificacionBloqueo();">
+
+                        <div class="panel panel-defaul panel-body">
+
+                            <div>
+
+                                <table class="table table-condensed table-bordered table-striped" show-filter="true">
+
+                                    <thead>
+                                    <tr>
+                                        <th>Tipo</th>
+                                        <th>Anterior</th>
+                                        <th>Nuevo</th>
+                                        <th>Creaci&oacute;n usuario</th>
+                                        <th>Creaci&oacute;n fecha</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tr ng-repeat="iterador in vm.logActividades">
+                                        <td class="text-center" data-title="TIPO">{{iterador.tipoActividad}}</td>
+                                        <td class="text-center" data-title="ANTERIOR">{{iterador.anteriorActividad}}
+                                        </td>
+                                        <td class="text-center" data-title="NUEVO">{{iterador.nuevoActividad}}</td>
+                                        <td class="text-center" data-title="CREACIONUSUARIO">
+                                            {{iterador.creacionUsuarioActividad}}
+                                        </td>
+                                        <td class="text-center" data-title="CREACIONFECHA">
+                                            {{iterador.creacionFechaActividad}}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
                         </div>
-                    </div>
+                    </tab>
 
-                    <div ng-if="!vm.object">
-                        <table class="table table-condensed table-bordered table-striped">
+                    <tab heading="OFICINAS" disabled="formUsuarios.$invalid" select="vm.seleccionarTab(5);"
+                         ng-click="vm.notificacionBloqueo();">
 
-                            <thead>
-                            <tr>
-                                <th>Oficina</th>
-                                <th>Creaci&oacute;n usuario</th>
-                                <th>Creaci&oacute;n fecha</th>
-                                <th>Modifica usuario</th>
-                                <th>Modifica fecha</th>
-                            </tr>
-                            </thead>
+                        <form id="formOficinas" name="formOficinas" class="form-validation">
 
-                            <tr ng-repeat="iterador in vm.objUsuario.lstOficinas">
-                                <td class="text-center" data-title="OFICINA">{{iterador.oficina.nombre}}</td>
-                                <td class="text-center" data-title="CREACIONUSUARIO">
-                                    {{iterador.creacionUsuario.nombre}}
-                                </td>
-                                <td class="text-center" data-title="CREACIONFECHA">{{iterador.creacionFecha}}</td>
-                                <td class="text-center" data-title="MODIFICAUSUARIO">
-                                    {{iterador.creacionUsuario.nombre}}
-                   x             </td>
-                                <td class="text-center" data-title="MODIFICAFECHA">{{iterador.creacionFecha}}</td>
-                                <td>
-                                    <div class="text-center">
-                                        <button class="btn btn-info btn-xs"
-                                                ng-click="vm.editarOficina(iterador,$index)">
-                                            <i class="glyphicon glyphicon-edit"></i>
-                                        </button>
-                                        <button class="btn btn-danger btn-xs"
-                                                ng-click="vm.eliminarOficina($index)">
-                                            <i class="glyphicon glyphicon-trash"></i>
-                                        </button>
+                            <div ng-if="vm.object" class="panel  b-a bg-light lt has-success wrapper-md">
+                                <div>
+                                    <div class="has-success">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Oficina: </label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" name="mySelect"
+                                                        ng-options="oficina.nombre for oficina in vm.lstOficinas track by oficina.idOficina"
+                                                        ng-model="vm.object.oficina"></select>
+                                            </div>
+                                        </div>
 
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                                </div>
+                            </div>
 
-                </form>
-            </tab>
+                            <div ng-if="!vm.object">
+                                <table class="table table-condensed table-bordered table-striped">
+
+                                    <thead>
+                                    <tr>
+                                        <th>Oficina</th>
+                                        <th>Creaci&oacute;n usuario</th>
+                                        <th>Creaci&oacute;n fecha</th>
+                                        <th>Modifica usuario</th>
+                                        <th>Modifica fecha</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tr ng-repeat="iterador in vm.objUsuario.lstOficinas">
+                                        <td class="text-center" data-title="OFICINA">{{iterador.oficina.nombre}}</td>
+                                        <td class="text-center" data-title="CREACIONUSUARIO">
+                                            {{iterador.creacionUsuario.nombre}}
+                                        </td>
+                                        <td class="text-center" data-title="CREACIONFECHA">{{iterador.creacionFecha}}
+                                        </td>
+                                        <td class="text-center" data-title="MODIFICAUSUARIO">
+                                            {{iterador.creacionUsuario.nombre}}
+                                            x
+                                        </td>
+                                        <td class="text-center" data-title="MODIFICAFECHA">{{iterador.creacionFecha}}
+                                        </td>
+                                        <td>
+                                            <div class="text-center">
+                                                <button class="btn btn-info btn-xs"
+                                                        ng-click="vm.editarOficina(iterador,$index)">
+                                                    <i class="glyphicon glyphicon-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-xs"
+                                                        ng-click="vm.eliminarOficina($index)">
+                                                    <i class="glyphicon glyphicon-trash"></i>
+                                                </button>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </form>
+                    </tab>
 
 
-        </tabset>
+                </tabset>
             </div>
             </br>
             </br>
-            <div ng-if="steps.step1" class="col-sm-2 text-center">
+            <div ng-if="vm.activarFoto== 1 ? true:false" class="col-sm-2 text-center">
                 <a
                         class="block panel padder-v bg-white-opacity item">
 									<span class="font-thin font-thin h1 block">
