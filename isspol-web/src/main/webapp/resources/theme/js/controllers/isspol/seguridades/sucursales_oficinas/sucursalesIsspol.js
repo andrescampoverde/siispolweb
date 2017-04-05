@@ -27,6 +27,8 @@ app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams','$http',
             console.log(data);
         };
 
+
+
         controller.visualiazaSucursales = function (objeto) {
             controller.sucursalObj= objeto;
         };
