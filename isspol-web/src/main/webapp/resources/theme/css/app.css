@@ -3910,6 +3910,15 @@ a.text-#000000:hover {
   font-size: 0;
 }
 
+.line-sm {
+  width: 100%;
+  height: 1px;
+  margin: 4px 0;
+  overflow: hidden;
+  font-size: 0;
+}
+
+
 .line-xs {
   margin: 0;
 }
@@ -3996,6 +4005,10 @@ a.text-#000000:hover {
 
 .l-h-2x {
   line-height: 2em;
+}
+
+.l-h-3x {
+  line-height: 4;
 }
 
 .l-s-1x {
