@@ -20,7 +20,7 @@ app.controller("SucursalesIsspol",['ngNotify',"$scope", 'ngTableParams','$http',
         $scope.authError = null;
         function obtenerOficinas () {
             $scope.oficinaSucursal = {};
-            Usuario.obtenerOficinasSucursales(callbackObtenerOficinas);
+            //Usuario.obtenerOficinasSucursales(callbackObtenerOficinas);
         };
 
         var callbackObtenerOficinas = function(data){
