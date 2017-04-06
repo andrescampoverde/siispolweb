@@ -17,6 +17,7 @@ app.controller("MotivosCierre",['ngNotify',"$scope", 'ngTableParams',
 
         controller.cancelar = function(){
             controller.motivo= undefined;
+            controller.objMotivo=undefined;
         };
 
         controller.guardar=function () {
@@ -35,10 +36,20 @@ app.controller("MotivosCierre",['ngNotify',"$scope", 'ngTableParams',
             controller.motivo=motivo;
         }
 
+        controller.visualiazarObjeto= function (motivo) {
+            controller.objMotivo= motivo;
+        };
+
         controller.eliminarMotivo=function ($indice) {
             controller.lstMotivosCierre.splice($indice,1);
             ngNotify.set('Exito, registro eliminado correctamente', 'success');
         }
+
+        function inicioFormularioMotivo() {
+            controller.motivo=undefined;
+        }
+
+        inicioFormularioMotivo();
 
     }
 ]);

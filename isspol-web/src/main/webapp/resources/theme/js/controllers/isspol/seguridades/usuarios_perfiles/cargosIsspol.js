@@ -32,6 +32,7 @@ app.controller("CargosIsspol",['ngNotify',"$scope", 'ngTableParams',
 
         controller.cancelar = function(){
             controller.cargo = undefined;
+            controller.objCargo=undefined;
         };
 
         controller.guardar = function(cargo){
@@ -49,6 +50,11 @@ app.controller("CargosIsspol",['ngNotify',"$scope", 'ngTableParams',
             }
 
         };
+
+        controller.visualizarObjeto= function (cargo) {
+            controller.objCargo= cargo;
+        };
+
 
         function iniciarFormulario(){
             controller.cargo = undefined;
