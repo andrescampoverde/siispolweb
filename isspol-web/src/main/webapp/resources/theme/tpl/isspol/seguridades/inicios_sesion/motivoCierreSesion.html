@@ -29,7 +29,7 @@
                     <tab heading="MOTIVOS CIERRE SESI&Oacute;N">
                         <form id="formMotivoCierreSesion" name="formMotivoCierreSesion" class="form-validation">
 
-                            <div ng-if="vm.motivo" class="panel  b-a bg-light lt has-success wrapper-md">
+                            <div ng-if="vm.motivo">
 
                                 <div class="line-sm"/>
                                 <div class="row  " >
@@ -77,7 +77,7 @@
         </div>
     </div>
     <div ng-if="!vm.motivo" class="panel panel-defaul panel-body">
-        <div ng-if="vm.objMotivo" class="panel  b-a bg-light lt has-success wrapper-md">
+        <div ng-if="vm.objMotivo">
 
             <div class="line-sm"/>
             <div class="row  " >

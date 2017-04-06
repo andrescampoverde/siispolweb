@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div ng-if="!vm.cargo" class="panel panel-defaul panel-body">
+    <div ng-if="!vm.cargo">
         <div ng-if="vm.objCargo" class="panel  b-a bg-light lt has-success wrapper-md">
             <div class="line-sm"/>
             <div class="row  ">
@@ -97,7 +97,7 @@
                 <tabset class="tab-container">
                     <tab heading="CARGOS">
                         <form ng-if="vm.cargo" name="formCargos" id="formCargos" class="form-validation">
-                            <div class="panel b-a bg-light lt has-success wrapper-md">
+                            <div>
 
 
                                 <div class="line-sm"/>
