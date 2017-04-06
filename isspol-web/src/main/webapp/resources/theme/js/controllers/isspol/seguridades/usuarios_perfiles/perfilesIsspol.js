@@ -20,6 +20,10 @@ app.controller("PerfilesIsspol",['ngNotify',"$scope", 'ngTableParams',
             controller.perfil = {}
         };
 
+        controller.visualizarPerfil=function (objeto) {
+            controller.objPerfilVi= objeto;
+        }
+
         controller.editarPerfil = function(perfil,$index){
             controller.lstPerfiles.splice($index,1);
             controller.perfil= perfil;
@@ -32,10 +36,11 @@ app.controller("PerfilesIsspol",['ngNotify',"$scope", 'ngTableParams',
 
         controller.cancelar = function(){
             controller.perfil = undefined;
+            controller.objPerfilVi = undefined;
         };
 
         controller.guardar = function(perfil){
-            var validacion=document.formPerfiles.reportValidity();
+            var validacion=document.formPerfil.reportValidity();
             if(validacion){
                 var of = {
                     id:perfil.id,
