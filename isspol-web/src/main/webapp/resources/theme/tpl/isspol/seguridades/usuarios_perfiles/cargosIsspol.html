@@ -33,30 +33,25 @@
     <div ng-if="!vm.cargo" class="panel panel-defaul panel-body">
         <div ng-if="vm.objCargo">
             <div class="panel-body">
-            <div class="line-sm"/>
-            <div class="row  ">
-                <div class="col-sm-10">
+
+            <div class="row row-fluid ">
+
                     <div class="col-md-2 bg-primary text-right" style="border: solid currentColor 1px; height: 26px;">
                         <label>Id: </label>
                     </div>
 
-
                     <div class="col-md-5 bg-light">
-                        {{vm.objCargo.id}}
+                        <label> {{vm.objCargo.id}}</label>
                     </div>
-                </div>
             </div>
-            <div class="line-sm"/>
-            <div class="row  ">
-                <div class="col-sm-10">
+
+            <div class="row row-fluid ">
                     <div class="col-md-2 bg-primary text-right" style="border: solid currentColor 1px; height: 26px;">
                     <label>*Nombre: </label>
                     </div>
-
                     <div class="col-md-5 bg-light">
-                        {{vm.objCargo.nombre}}
+                        <label> {{vm.objCargo.nombre}}</label>
                     </div>
-                </div>
             </div>
         </div>
         </div>
@@ -132,7 +127,7 @@
                                 </div>
 
                             </div>
-                            <div class="line-sm"/>
+                            <div class="line"/>
                             <div class="alert alert-info col-sm-10">
                                 <strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
                             </div>
