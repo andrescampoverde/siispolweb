@@ -5,9 +5,8 @@
 
 <div  ng-controller="CiudadesIsspol as vm">
 
-
 	<div class="bg-light lter b-b wrapper-md" style="heRight: 70px; padding: 10px;">
-				<div class="text-left b-b b-light text-sm">
+		<div class="text-left b-b b-light text-sm">
 					<button ng-if="!vm.ciudad && !vm.objeto ? true:false" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
 							type="reset" ng-click="vm.nuevaCiudad()">
 						<i class="fa fa-plus"></i>
@@ -27,10 +26,32 @@
 					</button>
 
 
-				</div>
-			</div>
+		</div>
+	</div>
 
 	<div ng-if="!vm.ciudad" class="panel panel-defaul panel-body">
+
+		<!-- Form para vista Ciudades -->
+		<div ng-if="vm.objCiudadVi">
+			<div class="panel-body">
+				<div class="row row-fluid ">
+					<div class="col-md-2 bg-primary text-right" style="border: solid currentColor 1px; height: 26px;">
+						<label>Nombre:</label>
+					</div>
+					<div class="col-md-5 bg-light">
+						<label>{{vm.objCiudadVi.nombre}}</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 bg-primary text-right" style="border: solid currentColor 1px; height: 26px;">
+						<label>Tipo:</label>
+					</div>
+					<div class="col-md-5 bg-light">
+						<label>{{vm.objCiudadVi.tipo}}</label>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<div ng-if="vm.objeto">
@@ -102,53 +123,50 @@
 		</div>
 	</div>
 
+	<!-- Form Nuevo -->
 	<form ng-if="vm.ciudad" name="formCiudad" id="formCiudad" class="form-validation">
-		<div class="panel panel-default">
-			<div class="panel panel-default">
-				<div class="panel-heading font-bold">DATOS DE CIUDAD</div>
-				<div class="panel-body has-success">
-
-					<div class="form-group">
-						<label class="col-sm-10 control-label">Id: </label>
-						<div >
-							<input type="number" ng-model="vm.ciudad.id"
-								class="form-control" placeholder="Ingrese el Id" required />
+		<div >
+			<div >
+				<tabset class="tab-container">
+					<tab heading="DATOS DE CIUDAD">
+						<div class="form-group">
+							<label class="col-sm-10 control-label">Id: </label>
+							<div >
+								<input type="number" ng-model="vm.ciudad.id"
+									   class="form-control" placeholder="Ingrese el Id" required />
+							</div>
 						</div>
-					</div>
-
-					
-					<div class="line"></div>
-					<div class="form-group">
-						<label class="col-sm-10 control-label">Nombre: </label>
-						<div >
-							<input type="text" ng-model="vm.ciudad.nombre"
-								class="form-control"
-								placeholder="Ingrese el nombre de la ciudad" required />
+						<div class="line"></div>
+						<div class="form-group">
+							<label class="col-sm-10 control-label">Nombre: </label>
+							<div >
+								<input type="text" ng-model="vm.ciudad.nombre"
+									   class="form-control"
+									   placeholder="Ingrese el nombre de la ciudad" required />
+							</div>
 						</div>
-					</div>
-					
-					<div class="line"></div>
+
+						<div class="line"></div>
 						<label class="col-sm-10 control-label">*Tipo: </label>
 						<div class=" has-success">
 							<select class="form-control" name="mySelect" id="mySelect"
-								ng-options="option.nombre for option in vm.lstTipos track by option.id"
-								ng-model="vm.ciudad.tipo" required>
+									ng-options="option.nombre for option in vm.lstTipos track by option.id"
+									ng-model="vm.ciudad.tipo" required>
 							</select>
 						</div>
 
+						<div class="line"></div>
 
-					<div class="line"></div>
-					<div class="alert alert-info">
-						<strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
-					</div>
-				</div>
+						<div class="alert alert-info">
+							<strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
+						</div>
+					</tab>
+				</tabset>
 			</div>
-
 		</div>
-
 		<div class="line line-dashed b-b line-lg pull-in"></div>
 	</form>
-</div>
 
+</div>
 
 </div>
