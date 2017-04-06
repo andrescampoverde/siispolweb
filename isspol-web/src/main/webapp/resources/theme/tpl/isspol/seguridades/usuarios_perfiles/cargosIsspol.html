@@ -30,8 +30,9 @@
         </div>
     </div>
 
-    <div ng-if="!vm.cargo">
-        <div ng-if="vm.objCargo" class="panel  b-a bg-light lt has-success wrapper-md">
+    <div ng-if="!vm.cargo" class="panel panel-defaul panel-body">
+        <div ng-if="vm.objCargo">
+            <div class="panel-body">
             <div class="line-sm"/>
             <div class="row  ">
                 <div class="col-sm-10">
@@ -57,6 +58,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <div ng-if="!vm.objCargo">
             <table class="table table-condensed table-bordered table-striped" show-filter="true">
@@ -134,6 +136,7 @@
                             <div class="alert alert-info col-sm-10">
                                 <strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
                             </div>
+                            <div class="line-sm"></div>
                         </form>
                     </tab>
                 </tabset>
