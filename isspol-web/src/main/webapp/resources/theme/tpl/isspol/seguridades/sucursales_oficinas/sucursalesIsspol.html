@@ -3,32 +3,33 @@
 </div>
 
 <div ng-controller="SucursalesIsspol as vm">
-         <div class="bg-light lter b-b wrapper-md">
-             <div class="hbox text-left b-b b-light text-sm">
-                    <button ng-if="!vm.objSucursal && !vm.sucursalObj ? true:false" class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
-                            type="reset" ng-click="vm.nuevaSucursal()">
-                        <i class="fa fa-plus"></i>
-                        <span>Nuevo</span>
-                    </button>
 
-                    <button ng-if="vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
-                            type="submit" ng-click="vm.guardar(vm.objSucursal)">
-                        <i class="fa fa-save block m-b-xs fa-2x "></i>
-                        <span>Guardar</span>
-                    </button>
+    <div class="bg-light lter b-b wrapper-md">
+        <div class="hbox text-left b-b b-light text-sm">
+            <button ng-if="!vm.objSucursal && !vm.sucursalObj ? true:false"
+                    class="pull-rigth btn m-b-xs btn-sm btn-dark btn-addon "
+                    type="reset" ng-click="vm.nuevaSucursal()">
+                <i class="fa fa-plus"></i>
+                <span>Nuevo</span>
+            </button>
 
-                    <button ng-if="vm.objSucursal || vm.sucursalObj ? true:false"
-                            class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
-                            type="submit" ng-click="vm.cancelar()">
-                        <i class="fa fa-ban block m-b-xs fa-2x "></i>
-                        <span>Cancelar</span>
-                    </button>
+            <button ng-if="vm.objSucursal" class="pull-rigth btn m-b-xs btn-sm btn-success btn-addon "
+                    type="submit" ng-click="vm.guardar(vm.objSucursal)">
+                <i class="fa fa-save block m-b-xs fa-2x "></i>
+                <span>Guardar</span>
+            </button>
+
+            <button ng-if="vm.objSucursal || vm.sucursalObj ? true:false"
+                    class="pull-rigth btn m-b-xs btn-sm btn-warning btn-addon"
+                    type="submit" ng-click="vm.cancelar()">
+                <i class="fa fa-ban block m-b-xs fa-2x "></i>
+                <span>Cancelar</span>
+            </button>
 
 
+        </div>
+    </div>
 
-
-                </div>
-            </div>
     <div ng-if="!vm.objSucursal" class="panel panel-defaul panel-body">
 
 
@@ -53,8 +54,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
         <div ng-if="!vm.sucursalObj">
@@ -104,24 +103,42 @@
 
             <div>
                 <div>DATOS DE SUCURSAL</div>
-                <div class="panel-body has-success">
-                   <div class="form-group" ng-if="!vm.habilitarCampos">
-                        <label class="col-lg-2-4 control-label">*ID: </label>
-                        <div>
-                            <input type="number" ng-model="vm.objSucursal.idSucursal"
-                                   class="form-control"
-                                   placeholder="ingrese el nombre de la sucursal" required/>
+                <div class="panel bg-light">
+
+                    <div class="form-group" ng-if="!vm.habilitarCampos">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <label class="l-h-0x">
+                                    *Id
+                                </label>
+                                <div>
+                                    <input type="number" ng-model="vm.objSucursal.idSucursal" class="form-control"
+                                           placeholder="ingrese el nombre de la sucursal" required>
+                                </div>
+
+                            </div>
+
                         </div>
+
                     </div>
 
                     <div class="line"></div>
                     <div class="form-group">
-                        <label class="col-lg-2-4 control-label">*Nombre: </label>
-                        <div >
-                            <input type="text" ng-disabled="vm.habilitarCampos" ng-model="vm.objSucursal.nombre"
-                                   class="form-control"
-                                   placeholder="ingrese el nombre de la sucursal" required/>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <label class="l-h-0x">
+                                    *Nombre
+                                </label>
+                                <div>
+                                    <input type="text" ng-disabled="vm.habilitarCampos" ng-model="vm.objSucursal.nombre"
+                                           class="form-control"
+                                           placeholder="ingrese el nombre de la sucursal" required>
+                                </div>
+
+                            </div>
+
                         </div>
+
                     </div>
 
                     <div class="line"></div>
@@ -135,7 +152,6 @@
         </div>
 
         <div class="line line-dashed b-b line-lg pull-in"></div>
-
 
 
     </form>
