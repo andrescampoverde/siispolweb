@@ -35,62 +35,86 @@
 				<div class="line b-b line-lg"></div>
 			</div>
 
+			<!-- form para nuevo -->
 			<div class="col-sm-6">
 
 				<form ng-if="vm.objEstOrg" name="formEstructura" id="formEstructura" class="form-validation">
+
+					<div class="line b-b line-lg"></div>
+
+					<div class="row">
+						<div class="col-sm-10">
+							<label class="l-h-0x">C&Oacute;DIGO:</label>
+							<div>
+								<input type="text" ng-model="vm.objEstOrg.idEstructuraOrganizacional" class="form-control" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="line-sm"></div>
+
+					<div class="row">
+						<div class="col-sm-10">
+							<label class="l-h-0x">*DESCRIPCI&Oacute;N:</label>
+							<div>
+								<input type="text" ng-model="vm.objEstOrg.descripcion" class="form-control" required>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="line-sm"></div>
+
+					<div class="row">
+						<div class="col-sm-10">
+							<label class="l-h-0x">*NIVEL PADRE:</label>
+							<div>
+								<input type="text" ng-model="vm.objEstOrg.estructuraOrganizacionalByIdEstructuraPadre" class="form-control" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="line-sm"></div>
+
+					<div class="row">
+						<div class="col-sm-10">
+							<label class="l-h-0x">*ORDEN:</label>
+							<div>
+								<input type="text" ng-model="vm.objEstOrg.orden" class="form-control" required>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="line-sm"></div>
+
+					<div class="row">
+						<div class="col-sm-10">
+							<label class="l-h-0x">*NIVEL:</label>
+							<div>
+								<select class="form-control" name="mySelect" id="mySelect"
+										ng-options="option.nombre for option in vm.lstNiveles track by option.id"
+										ng-model="vm.objEstOrg.nivelEstructuraOrgByIdNivelEstrcuturaOrg"></select>
+							</div>
+						</div>
+					</div>
+
+					<div class="line b-b line-lg"></div>
+
 					<div class="alert alert-info">
 						<strong>NOTA:</strong> Los campos se&ntilde;alados con (*) son obligatorios.
 					</div>
-					<div class="line b-b line-lg"></div>
-
-					<label class="col-sm-3 control-label">C&Oacute;DIGO:</label>
-					<div class="col-sm-3 has-success">
-						<div>
-							<input type="text" ng-model="vm.objEstOrg.idEstructuraOrganizacional" class="form-control" required>
-						</div>
-					</div>
-
-					<div class="line line-dashed b-b line-lg pull-in"></div>
-
-					<label class="col-sm-3 control-label">*DESCRIPCI&Oacute;N:</label>
-					<div class="col-sm-5 has-success">
-						<div>
-							<input type="text" ng-model="vm.objEstOrg.descripcion" class="form-control" required>
-						</div>
-					</div>
-
-					<div class="line line-dashed b-b line-lg pull-in"></div>
-					<label class="col-sm-3 control-label">*NIVEL PADRE:</label>
-					<div class="col-sm-3 has-success">
-						<div>
-							<input type="text" ng-model="vm.objEstOrg.estructuraOrganizacionalByIdEstructuraPadre" class="form-control" required>
-						</div>
-					</div>
-
-
-					<div class="line line-dashed b-b line-lg pull-in"></div>
-					<label class="col-sm-3 control-label">*ORDEN:</label>
-					<div class="col-sm-3 has-success">
-						<div>
-							<input type="text" ng-model="vm.objEstOrg.orden" class="form-control" required>
-						</div>
-					</div>
-
-
-					<div class="line line-dashed b-b line-lg pull-in"></div>
-					<label class="col-sm-3 control-label">*NIVEL:</label>
-					<div class="col-lg-4 has-success">
-						<div>
-							<select class="form-control" name="mySelect" id="mySelect"
-									ng-options="option.nombre for option in vm.lstNiveles track by option.id"
-									ng-model="vm.objEstOrg.nivelEstructuraOrgByIdNivelEstrcuturaOrg"></select>
-						</div>
-					</div>
 
 					<div class="line b-b line-lg"></div>
-					<button ng-click="vm.guardarPerfil(vm.objEstOrg)"
-							class="pull-left btn m-b-xs btn-sm btn-success btn-addon"><i class="fa fa-floppy-o"></i>GUARDAR
-					</button>
+
+					<div>
+						<button ng-click="vm.guardarPerfil(vm.objEstOrg)"
+								class="pull-left btn m-b-xs btn-sm btn-success btn-addon"><i class="fa fa-floppy-o"></i>GUARDAR
+						</button>
+					</div>
+
+
+
 
 				</form>
 			</div>
