@@ -99,15 +99,11 @@
 
 
     <form ng-if="vm.objSucursal" name="formSucursal" class="form-validation">
-        <div class="panel panel-default">
-
-            <div>
-                <div>DATOS DE SUCURSAL</div>
-                <div class="panel bg-light">
-
-                    <div class="form-group" ng-if="!vm.habilitarCampos">
-                        <div class="row">
-                            <div class="col-sm-10">
+        <tabset class="tab-container">
+            <tab heading="DATOS DE SUCURSAL">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-10">
                                 <label class="l-h-0x">
                                     *Id
                                 </label>
@@ -115,28 +111,21 @@
                                     <input type="number" ng-model="vm.objSucursal.idSucursal" class="form-control"
                                            placeholder="ingrese el nombre de la sucursal" required>
                                 </div>
-
-                            </div>
-
                         </div>
 
                     </div>
 
                     <div class="line"></div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-10">
                                 <label class="l-h-0x">
                                     *Nombre
                                 </label>
                                 <div>
-                                    <input type="text" ng-disabled="vm.habilitarCampos" ng-model="vm.objSucursal.nombre"
+                                    <input type="text"  ng-model="vm.objSucursal.nombre"
                                            class="form-control"
                                            placeholder="ingrese el nombre de la sucursal" required>
                                 </div>
-
-                            </div>
-
                         </div>
 
                     </div>
@@ -147,9 +136,10 @@
                     </div>
                 </div>
 
-            </div>
+            </tab>
+        </tabset>
 
-        </div>
+
 
         <div class="line line-dashed b-b line-lg pull-in"></div>
 
